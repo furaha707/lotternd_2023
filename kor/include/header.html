@@ -1,0 +1,55 @@
+<ul class="skip">
+	<li><a class="link" href="#contents">본문내용 바로가기</a></li>
+	<li><a class="link" href="#header">헤더 바로가기</a></li>
+	<li><a class="link" href="#footer">푸터 바로가기</a></li>
+</ul>
+
+<header id="header" class="header header-gnb">
+	<div class="container header-wrap">
+		<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
+			<img src="../../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" class="logo-origin" />
+			<img src="../../assets/images/main/logo-white.png" alt="<?=$SS[sitename]?>" class="logo-white" />
+		</a>
+		<div class="nav__bg"></div>
+		<!-- S : navigation -->
+		<nav class="nav">
+			<? include "../include/nav.html" ?>
+			<div class="nav-deco">
+				<img src="../../assets/images/main/l-deco.png" alt="deco" />
+			</div>
+		</nav>
+		<!-- E : navigation -->
+		<!-- S : util -->
+		<div class="util-wrap">
+			<div class="lang-item">
+				<img src="../../assets/images/icon/global-ico.png" alt="언어아이콘" />
+				<div class="lang-wrap">
+					<ul class="inner">
+						<a href="../main/main.html" class="lang active">KOR</a>
+						<a href="#" class="lang" onclick="javascript:alert('준비중입니다'); return false">ENG</a>
+					</ul>
+				</div>
+			</div>
+			<a href="#" class="link-item" onclick="javascript:alert('준비중입니다'); return false">Sweet Park</a>
+			<div class="total-item">
+				<img src="../../assets/images/icon/menu-ico.png" alt="전체메뉴아이콘" />
+				<i class="xi-close close-ico"></i>
+			</div>
+		</div>
+		<!-- E : util -->
+		<button class="nav-mobile__btn" type="button">
+			<i class="xi-bars"></i>
+		</button>
+	</div>
+</header>
+
+<!-- S : mobile navigation -->
+<? include "../include/aside.html" ?>
+<? include "../include/header-menu.html" ?>
+<!-- E : mobile navigation -->
+
+<!-- S : loading image -->
+<div class="loading-image">
+	<img src="../../assets/images/icon/loading.svg" alt="loading" />
+</div>
+<!-- E : loading image -->

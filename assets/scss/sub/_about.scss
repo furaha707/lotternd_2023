@@ -1,0 +1,242 @@
+// 회사소개
+.introduce-wrap{
+  .title{
+    font-size: 2.469rem;
+    line-height: 3.469rem;
+    font-weight: 300;
+    color: $color-1;
+    text-align: center;
+    @include mdq-max(lg) {
+      font-size: rem(22);
+      line-height: 1.3;
+    }
+  }
+  .box-inner{
+    .box{
+      display: flex;
+      background-color: #f7f7f7;
+      @include mdq-max(lg) {
+        flex-direction: column;
+      }
+      &:nth-child(2n) {
+        .txt-bx{
+          padding: rem(20) rem(150);
+          @media screen and (max-width: 1600px) {
+            padding: rem(40) rem(50);
+          }
+          @include mdq-max(xxl) {
+            padding: rem(40) rem(20);
+          }
+          @include mdq-max(lg) {
+            padding: rem(40) rem(20);
+            text-align: left;
+          } 
+        }
+      }
+      &:nth-child(2n-1) {
+        .txt-bx{
+          padding: rem(20) rem(150) rem(20) rem(250);
+          @media screen and (max-width: 1600px) {
+            padding: rem(40) rem(50);
+          }
+          @include mdq-max(xxl) {
+            padding: rem(40) rem(20);
+          }
+          @include mdq-max(lg) {
+            padding: rem(40) rem(20);
+            text-align: right;
+          } 
+        }
+      }
+      .txt-bx{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include mdq-max(lg) {
+          order: 2;
+          width: 100%;
+        }
+        .tit{
+          font-size: 1.875rem;
+          line-height: 2.5rem;
+          color: $gray-1;
+          font-weight: 600;
+          @include mdq-max(lg) {
+            font-size: rem(24);
+            line-height: 1.2;
+          }
+        }
+        .desc{
+          font-size: 1.25rem;
+          color: $gray-5;
+          font-weight: 300;
+          line-height: 1.875rem;
+          margin-top: rem(30);
+          @include mdq-max(lg) {
+            font-size: rem(18);
+            line-height: 1.2;
+            margin-top: rem(15);
+          }
+        }
+      }
+      .img-bx{
+        width: 50%;
+        background-color: #bbbbbb;
+        @include mdq-max(lg) {
+          order: 1;
+          width: 100%;
+        }
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .diagram-box{
+    .inner{
+      position: relative;
+      @media (max-width: 1800px) {
+        max-width: 768px;
+        margin: 0 auto;
+      }
+      .img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+    }
+  }
+}
+
+
+// Mission & Vision
+.mission-wrap{
+  .txt-area{
+    text-align: center;
+    padding: em(40) 0;
+    @include mdq-max(md) {
+      padding: em(20) 0;
+    }
+    .title{
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: $color-1;
+      padding: em(10) 0;
+    }
+    .desc{
+      &-tit{
+        font-size: 1.574rem;
+        color: $gray-1;
+        font-weight: 500;
+        padding: em(5) 0;
+      }
+      &-cont{
+        font-size: 1.25rem;
+        line-height: 1.2;
+        font-weight: 300;
+        color: $gray-5;
+      }
+    }
+  }
+  .diagram-area{
+    position: relative;
+    height: em(416);
+    margin-bottom: 150px;
+    @include mdq-max(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 0;
+      height: auto;
+    }
+    .box{
+      width: em(416);
+      height: em(417);
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      @include mdq-max(md) {
+        width: em(230);
+        height: em(230);
+        position: unset;
+        transform: translateX(0);
+      }
+      &:nth-child(1) {
+        background: url(../images/sub/about/mission-bg1.png) no-repeat;
+        background-size: cover;
+        left: calc(25% - 20px);
+        @include mdq-max(md) {
+          margin-right: calc(100% - 230px);
+        }
+      }
+      &:nth-child(2) {
+        background: url(../images/sub/about/mission-bg2.png) no-repeat;
+        background-size: cover;
+        left: 50%;
+        z-index: 2;
+        @include mdq-max(md) {
+          margin-left: calc(100% - 230px);
+        }
+      }
+      &:nth-child(3) {
+        background: url(../images/sub/about/mission-bg3.png) no-repeat;
+        background-size: cover;
+        left: calc(75% + 20px);
+        @include mdq-max(md) {
+          margin-right: calc(100% - 230px);
+        }
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: em(20);
+      @include mdq-max(md) {
+        row-gap: 2px;
+      }
+      .icon{
+        img{
+          display: block;
+          margin: 0 auto;
+          @include mdq-max(md) {
+            width: 50%;
+          }
+        }
+      }
+      .title{
+        text-align: center;
+        .tit{
+          font-size: 1.594rem;
+          color: $white;
+          font-weight: 600;
+          @include mdq-max(md) {
+            font-size: rem(16);
+          }
+          &-sub{
+            font-size: 1.125rem;
+            color: $white;
+            @include mdq-max(md) {
+              font-size: rem(14);
+            }
+          }
+        }
+      }
+      .desc{
+        font-size: 1.125rem;
+        font-weight: 300;
+        color: $white;
+        line-height: 1.5;
+        text-align: center;
+        @include mdq-max(md) {
+          font-size: rem(10);
+        }
+      }
+    }
+  }
+}

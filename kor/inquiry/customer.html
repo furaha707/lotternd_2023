@@ -1,0 +1,126 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '5';
+    $P_dp2 = '1';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../../assets/css/inquiry.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<!-- S : Section -->
+			<section class="section inquiry-section py-lg-30 py-15">
+				<div class="container" style="max-width: 1000px;">
+					<div class="inquiry-tit-bx">
+						<div class="inner">
+							<p class="tit">롯데중앙연구소에 궁금하신 사항을 남겨주세요.</p>
+							<p class="txt">열린 마음으로 고객의 목소리에 귀 기울이겠습니다.</p>
+						</div>
+						<div>
+							<img class="inquiry-icon" src="../../assets/images/sub/inquiry-ico.png" alt="아이콘" />
+						</div>
+					</div>
+					<ul class="caution-list bullet-list bullet-list--txt bullet-type--js">
+						<li data-bullet="※" class="item">(*) 표시는 필수 입력 항목입니다.</li>
+						<li data-bullet="※" class="item">접수된 문의는 유관 부서 검토 후 빠른 시일 내 기재하신 이메일을 통해 답변드리겠습니다.</li>
+					</ul>
+					<form action="">
+						<ul class="clause_list">
+							<li>
+								<h5>개인정보수집 동의</h5>
+								<div class="textarea_box_border">
+									<div class="textarea_box"><? include "../policy/privacy-text.html" ?></div>
+								</div>
+								<div class="agree_box mt_10">
+									<input type="checkbox" name="info33" value="1" id="info33" title="개인정보처리방침에 동의" class="mr_05" required />
+									<label for="info33">개인정보수집에 동의합니다. [필수]</label>
+								</div>
+							</li>
+						</ul>
+						<table class="table-form-01 type_b">
+							<tbody>
+								<tr>
+									<th>문의유형 <span class="text-danger">*</span></th>
+									<td>
+										<select class="sel_for" name="info1" title="구분" id="info1" required>
+											<option value="">문의유형</option>
+											<option value="일반문의">일반문의</option>
+											<option value="제휴문의">제휴문의</option>
+											<option value="아이디어 제안">아이디어 제안</option>
+											<option value="기타">기타</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>이름 <span class="text-danger">*</span></th>
+									<td>
+										<input type="text" name="uname" id="uname" title="이름" maxlength="50" class="input_for" placeholder="이름을 입력해주세요." required />
+									</td>
+								</tr>
+								<tr>
+									<th>이메일 <span class="text-danger">*</span></th>
+									<td>
+										<input type="email" name="email" id="email" title="이메일"  class="input_for" placeholder="이메일을 입력해주세요." required />
+									</td>
+								</tr>
+								<tr>
+									<th>연락처</th>
+									<td>
+										<input type="tel" name="utel" id="utel" title="연락처" class="input_for" placeholder="'-'없이 입력해주세요." onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" />
+									</td>
+								</tr>
+								<tr>
+									<th>제목 <span class="text-danger">*</span></th>
+									<td>
+										<input type="text" name="title" id="title" title="제목" maxlength="200" class="input_for" placeholder="제목을 입력해주세요." required />
+									</td>
+								</tr>
+								<tr>
+									<th>내용 <span class="text-danger">*</span></th>
+									<td>
+										<textarea name="content" id="content" title="문의내용" class="area_for" placeholder="내용을 입력해주세요." required></textarea>
+									</td>
+								</tr>
+								<tr class="pb-lg-0 pb-15">
+									<th scope="row" class="ver_top">파일첨부</th>
+									<td>
+										<div class="input_wrap file_box">
+											<p></p>
+											<span class="btn_type_file">찾아보기</span>
+											<input type="file" name="bf_file[]" />
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="board_btn_bx text_center mt_30">
+							<input type="submit" value="문의하기 " class="btn-type-01 form-btn" />
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

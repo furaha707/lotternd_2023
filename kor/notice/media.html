@@ -1,0 +1,179 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '3';
+    $P_dp2 = '2';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../assets/css/sub.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<!-- S : Section -->
+			<section class="section py-lg-30 py-15">
+				<div class="container">
+					<div class="body-title">
+						<?=${nav_.$P_dp1._.$P_dp2}?>
+					</div>
+
+					<div class="table-info wow fadeInUp">
+						<!-- S : 글 갯수 -->
+						<p class="total-list">Total <span class="num">100</span></p>
+						<!-- E : 글 갯수 -->
+
+						<!-- S : 검색영역 -->
+						<div class="board-search-01">
+							<form method="POST" action="?" id="searchForm">
+								<fieldset>
+									<input type="text" title="검색어" class="input-type-01" name="find_word" value="" placeholder="검색어를 입력하세요." />
+									<input type="submit" value="" class="btn btn-color-01" />
+								</fieldset>
+							</form>
+						</div>
+						<!-- E : 검색영역 -->
+					</div>
+
+					<ul class="img_board_list row type_b wow fadeInUp">
+						<!-- S : 검색결과 없을 경우 노출 -->
+						<!-- <li class="col-12 no_data">
+							<img src="../../assets/images/sub/list-none.png" alt="게시물없음 " />
+							<p>검색결과가 없습니다.</p>
+						</li> -->
+						<!-- E : 검색결과 없을 경우 노출 -->
+						<li class="col-xs-6 col-sm-4 col-lg-4">
+							<a href="./media__view.html">
+								<!-- 이미지 권장사이즈 : 840*560 -->
+								<div class="img_box">
+									<img src="../../images/board/sample.jpg" alt="썸네일" />
+									<div class="hover_box">
+										<div class="arrow">
+											<img src="../../assets/images/icon/link-arrow.png" alt="화살표" />
+										</div>
+									</div>
+								</div>
+								<div class="txt_box">
+									<p class="tit">제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역</p>
+									<p class="des">
+										<span>2018-02-06</span>
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-lg-4">
+							<a href="./media__view.html">
+								<!-- 이미지 권장사이즈 : 840*560 -->
+								<div class="img_box">
+									<img src="../../images/board/sample.jpg" alt="썸네일" />
+									<div class="hover_box">
+										<div class="arrow">
+											<img src="../../assets/images/icon/link-arrow.png" alt="화살표" />
+										</div>
+									</div>
+								</div>
+								<div class="txt_box">
+									<p class="tit">제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역</p>
+									<p class="des">
+										<span>2018-02-06</span>
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-lg-4">
+							<a href="./media__view.html">
+								<!-- 이미지 권장사이즈 : 840*560 -->
+								<div class="img_box">
+									<img src="../../images/board/sample.jpg" alt="썸네일" />
+									<div class="hover_box">
+										<div class="arrow">
+											<img src="../../assets/images/icon/link-arrow.png" alt="화살표" />
+										</div>
+									</div>
+								</div>
+								<div class="txt_box">
+									<p class="tit">제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역</p>
+									<p class="des">
+										<span>2018-02-06</span>
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xs-6 col-sm-4 col-lg-4">
+							<a href="./media__view.html">
+								<!-- 이미지 권장사이즈 : 840*560 -->
+								<div class="img_box">
+									<img src="../../images/board/sample.jpg" alt="썸네일" />
+									<div class="hover_box">
+										<div class="arrow">
+											<img src="../../assets/images/icon/link-arrow.png" alt="화살표" />
+										</div>
+									</div>
+								</div>
+								<div class="txt_box">
+									<p class="tit">제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역제목 노출 영역</p>
+									<p class="des">
+										<span>2018-02-06</span>
+									</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+
+					<!-- S : 페이징 -->
+					<div class="paging-area">
+						<ul>
+							<li>
+								<a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="prev"><span>이전으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="active">1<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">2<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">3<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">4<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;">5<span></span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next"><span>다음으로</span></a>
+							</li>
+							<li>
+								<a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- E : 페이징 -->
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

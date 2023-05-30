@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+.museum-tit .tit {
+	font-size: 2.375rem;
+	text-align: center;
+	color: #da291c;
+	font-weight: 600;
+	line-height: 1.4;
+	@include mdq-max(lg) {
+		font-size: 2rem;
+		line-height: 2.2rem;
+	}
+}
+
+.museum-tit .txt {
+	font-size: 1.3125rem;
+	font-weight: 300;
+	line-height: 2.219rem;
+	text-align: center;
+	color: #333;
+	@include mdq-max(lg) {
+		line-height: 1.7rem;
+	}
+}
+
+.museum-txt .tit {
+	font-size: rem(30);
+	font-weight: 600;
+	line-height: 2.219rem;
+	text-align: center;
+	color: $color-1;
+}
+
+.museum-txt .txt {
+	font-size: 1.7rem;
+	font-weight: bold;
+	line-height: 2.219rem;
+	text-align: center;
+	color: #111;
+}
+
+.museum-page .btn-type-01 {
+	max-width: 260px;
+	background-size: 25px 13px;
+	background-position: 90% center;
+	padding: 0 25px;
+	font-size: 1.125rem;
+	margin: 0 auto;
+}
+
+.vr-wrapper {
+	.inner {
+		position: relative;
+		padding-top: 46%;
+		width: 100%;
+		height: 0;
+		@include mdq-max(md) {
+			padding-top: 95%;
+		}
+	}
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

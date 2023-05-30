@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// Utilities
+@import 'utilities';
+
+// Font-face
+@import 'font-face';
+
+// Reset
+@import 'reset';
+
+// Library
+@import 'library';
+
+// Layout
+@import 'layout';
+
+// Components
+@import 'components';
+
+// Grid
+@import 'grid';
+
+// Board Template
+// @import 'board';
+
+// Board Template Old Version
+@import 'board.old';
+// @import "board";
+
+// 공통
+.common-tab {
+	.tab-header {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		margin: 30px 0;
+		@include mdq-max(lg) {
+			flex-wrap: wrap;
+		}
+		.tab-item {
+			.link {
+				display: block;
+				min-width: 230px;
+				height: 54px;
+				line-height: 54px;
+				text-align: center;
+				border-radius: 27px;
+				background-color: rgb(#333, 0.8);
+				font-size: 1.25rem;
+				font-weight: 500;
+				color: rgba(255, 255, 255, 0.5);
+				cursor: pointer;
+
+				&.on {
+					background-color: $color-1;
+					color: white;
+				}
+				@media (max-width: 1280px) {
+					height: 40px;
+					line-height: 40px;
+				}
+				@include mdq-max(lg) {
+					min-width: 170px;
+				}
+				@include mdq-max(sm) {
+					min-width: 145px;
+				}
+			}
+		}
+		@media (max-width: 1280px) {
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+	}
+}
+
+.common-sub-title {
+	font-size: rem(22);
+	color: $gray-1;
+	font-weight: 500;
+	padding-left: 20px;
+	position: relative;
+	@include mdq-max(lg) {
+		font-size: rem(20);
+		padding-left: 14px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		width: 4px;
+		height: 22px;
+		background-color: $color-1;
+		border-radius: 2px;
+		@include mdq-max(lg) {
+			width: 3px;
+			height: 16px;
+		}
+	}
+}
+.common-description {
+	font-size: rem(16);
+	color: $gray-5;
+	font-weight: 300;
+	line-height: 1.4;
+}

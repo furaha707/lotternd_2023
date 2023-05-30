@@ -1,0 +1,273 @@
+/* Made by Masstige */
+.introduce-wrap .title {
+  font-size: 2.469rem;
+  line-height: 3.469rem;
+  font-weight: 300;
+  color: #da291c;
+  text-align: center;
+}
+@media all and (max-width: 1024px) {
+  .introduce-wrap .title {
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+}
+.introduce-wrap .box-inner .box {
+  display: flex;
+  background-color: #f7f7f7;
+}
+@media all and (max-width: 1024px) {
+  .introduce-wrap .box-inner .box {
+    flex-direction: column;
+  }
+}
+.introduce-wrap .box-inner .box:nth-child(2n) .txt-bx {
+  padding: 1.25rem 9.375rem;
+}
+@media screen and (max-width: 1600px) {
+  .introduce-wrap .box-inner .box:nth-child(2n) .txt-bx {
+    padding: 2.5rem 3.125rem;
+  }
+}
+@media all and (max-width: 1400px) {
+  .introduce-wrap .box-inner .box:nth-child(2n) .txt-bx {
+    padding: 2.5rem 1.25rem;
+  }
+}
+@media all and (max-width: 1024px) {
+  .introduce-wrap .box-inner .box:nth-child(2n) .txt-bx {
+    padding: 2.5rem 1.25rem;
+    text-align: left;
+  }
+}
+.introduce-wrap .box-inner .box:nth-child(2n-1) .txt-bx {
+  padding: 1.25rem 9.375rem 1.25rem 15.625rem;
+}
+@media screen and (max-width: 1600px) {
+  .introduce-wrap .box-inner .box:nth-child(2n-1) .txt-bx {
+    padding: 2.5rem 3.125rem;
+  }
+}
+@media all and (max-width: 1400px) {
+  .introduce-wrap .box-inner .box:nth-child(2n-1) .txt-bx {
+    padding: 2.5rem 1.25rem;
+  }
+}
+@media all and (max-width: 1024px) {
+  .introduce-wrap .box-inner .box:nth-child(2n-1) .txt-bx {
+    padding: 2.5rem 1.25rem;
+    text-align: right;
+  }
+}
+.introduce-wrap .box-inner .box .txt-bx {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media all and (max-width: 1024px) {
+  .introduce-wrap .box-inner .box .txt-bx {
+    order: 2;
+    width: 100%;
+  }
+}
+.introduce-wrap .box-inner .box .txt-bx .tit {
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+  color: #111;
+  font-weight: 600;
+}
+@media all and (max-width: 1024px) {
+  .introduce-wrap .box-inner .box .txt-bx .tit {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+}
+.introduce-wrap .box-inner .box .txt-bx .desc {
+  font-size: 1.25rem;
+  color: #555;
+  font-weight: 300;
+  line-height: 1.875rem;
+  margin-top: 1.875rem;
+}
+@media all and (max-width: 1024px) {
+  .introduce-wrap .box-inner .box .txt-bx .desc {
+    font-size: 1.125rem;
+    line-height: 1.2;
+    margin-top: 0.9375rem;
+  }
+}
+.introduce-wrap .box-inner .box .img-bx {
+  width: 50%;
+  background-color: #bbbbbb;
+}
+@media all and (max-width: 1024px) {
+  .introduce-wrap .box-inner .box .img-bx {
+    order: 1;
+    width: 100%;
+  }
+}
+.introduce-wrap .box-inner .box .img-bx img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.introduce-wrap .diagram-box .inner {
+  position: relative;
+}
+@media (max-width: 1800px) {
+  .introduce-wrap .diagram-box .inner {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+.introduce-wrap .diagram-box .inner .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.mission-wrap .txt-area {
+  text-align: center;
+  padding: 2.5em 0;
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .txt-area {
+    padding: 1.25em 0;
+  }
+}
+.mission-wrap .txt-area .title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #da291c;
+  padding: 0.625em 0;
+}
+.mission-wrap .txt-area .desc-tit {
+  font-size: 1.574rem;
+  color: #111;
+  font-weight: 500;
+  padding: 0.3125em 0;
+}
+.mission-wrap .txt-area .desc-cont {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #555;
+}
+.mission-wrap .diagram-area {
+  position: relative;
+  height: 26em;
+  margin-bottom: 150px;
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0;
+    height: auto;
+  }
+}
+.mission-wrap .diagram-area .box {
+  width: 26em;
+  height: 26.0625em;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.25em;
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box {
+    width: 14.375em;
+    height: 14.375em;
+    position: unset;
+    transform: translateX(0);
+  }
+}
+.mission-wrap .diagram-area .box:nth-child(1) {
+  background: url(../images/sub/about/mission-bg1.png) no-repeat;
+  background-size: cover;
+  left: calc(25% - 20px);
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box:nth-child(1) {
+    margin-right: calc(100% - 230px);
+  }
+}
+.mission-wrap .diagram-area .box:nth-child(2) {
+  background: url(../images/sub/about/mission-bg2.png) no-repeat;
+  background-size: cover;
+  left: 50%;
+  z-index: 2;
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box:nth-child(2) {
+    margin-left: calc(100% - 230px);
+  }
+}
+.mission-wrap .diagram-area .box:nth-child(3) {
+  background: url(../images/sub/about/mission-bg3.png) no-repeat;
+  background-size: cover;
+  left: calc(75% + 20px);
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box:nth-child(3) {
+    margin-right: calc(100% - 230px);
+  }
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box {
+    row-gap: 2px;
+  }
+}
+.mission-wrap .diagram-area .box .icon img {
+  display: block;
+  margin: 0 auto;
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box .icon img {
+    width: 50%;
+  }
+}
+.mission-wrap .diagram-area .box .title {
+  text-align: center;
+}
+.mission-wrap .diagram-area .box .title .tit {
+  font-size: 1.594rem;
+  color: #fff;
+  font-weight: 600;
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box .title .tit {
+    font-size: 1rem;
+  }
+}
+.mission-wrap .diagram-area .box .title .tit-sub {
+  font-size: 1.125rem;
+  color: #fff;
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box .title .tit-sub {
+    font-size: 0.875rem;
+  }
+}
+.mission-wrap .diagram-area .box .desc {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  .mission-wrap .diagram-area .box .desc {
+    font-size: 0.625rem;
+  }
+}

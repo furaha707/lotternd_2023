@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.board-box {
+	.view2-wrapper {
+		.border-round-box {
+			border: 8px solid #f2f2f2;
+			border-radius: 25px;
+			padding: 20px;
+			margin-top: 80px;
+		}
+		.bg-gray-box {
+			background-color: #f2f2f2;
+			border-radius: 25px;
+			padding: 40px;
+			margin-top: 50px;
+		}
+
+		.tit-bold {
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.des {
+			font-size: 18px;
+			color: #555555;
+			font-weight: 300;
+			line-height: 1.6;
+		}
+
+		p {
+			margin: 20px 0;
+		}
+
+		.flex-bx {
+			margin: 50px 0;
+		}
+		.d-flex {
+			margin-bottom: 20px;
+		}
+
+		.deco-line {
+			display: block;
+			width: 32px;
+			height: 2px;
+			background-color: #da291c;
+		}
+		.sub-tit {
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
+		@media screen and (min-width: 1400px) {
+			.flex-bx {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.img {
+					flex: 1 0 40%;
+					max-width: 40%;
+				}
+
+				.text-bx {
+					flex: 1 0 60%;
+					max-width: 60%;
+					padding-left: 70px;
+				}
+			}
+			.flex-reverse {
+				flex-direction: row-reverse;
+
+				.img {
+					text-align: right;
+				}
+
+				.text-bx {
+					padding-left: 0;
+					padding-right: 80px;
+				}
+			}
+			.flex-bx--small {
+				.img {
+					flex: 1 0 30%;
+					max-width: 30%;
+				}
+				.text-bx {
+					flex: 1 1 auto;
+					width: 1%;
+					max-width: 100%;
+					padding-right: 0;
+				}
+			}
+		}
+
+		@media screen and (min-width: 1024px) {
+			.border-round-box {
+				padding: 50px 80px;
+			}
+
+			.d-inline-lg {
+				display: inline-block;
+			}
+
+			.d-mo {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 1024px) {
+			.d-flex {
+				display: block !important;
+			}
+			.tit-bold {
+				font-size: 22px;
+			}
+			.des {
+				font-size: 16px;
+			}
+
+			.img-small {
+				width: 70%;
+			}
+
+			.d-pc {
+				display: none;
+			}
+			.d-mo {
+				display: inline-block;
+			}
+		}
+
+		@media screen and (max-width: 560px) {
+			.img-small {
+				width: 80%;
+			}
+			.img-mini {
+				width: 40%;
+			}
+		}
+	}
+}

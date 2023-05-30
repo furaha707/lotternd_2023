@@ -1,0 +1,138 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '5';
+    $P_dp2 = '2';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../../assets/css/inquiry.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<!-- S : Section -->
+			<section class="section inquiry-section py-lg-30 py-15">
+				<div class="container" style="max-width: 1000px">
+					<div class="inquiry-tit-bx">
+						<div class="inner">
+							<p class="tit tit--sub">
+								롯데중앙연구소는 식품업계 상생 협력을 도모하기 위해 <br class="d-lg-block d-none" />
+								<span class="text-color-1">식품제조사 현직자 대상 무료 식품 안전교육</span>을 진행하고 있습니다.
+							</p>
+						</div>
+					</div>
+					<div class="edu-info-box mb-lg-12 mb-10">
+						<div class="list">
+							<span class="tit">ㆍ대상</span>
+							<p class="desc">식품 제조사 품질, 안전 담당 현직자 누구나 (※ 롯데 파트너사 여부 무관)</p>
+						</div>
+						<div class="list">
+							<span class="tit">ㆍ방식</span>
+							<p class="desc">온라인 Zoom Live 교육</p>
+						</div>
+						<div class="list">
+							<span class="tit">ㆍ신청 방법</span>
+							<p class="desc">현재 페이지에서 신청 접수 (해당 교육일 기준 2주 전까지 신청 가능 / 선착순 마감될 수 있음)</p>
+						</div>
+						<div class="list">
+							<span class="tit">ㆍ문의</span>
+							<p class="desc">롯데중앙연구소 식품 안전교육 담당자 (Tel : 02-6309-3614 / E-mail : sykim00@lotte.net)</p>
+						</div>
+					</div>
+					<div class="d-flex align-items-center justify-content-center pb-lg-12 pb-10 mb-lg-15 mb-10 border-bottom">
+						<a href="" class="btn-type-01 download-btn">교육 커리큘럼 다운로드</a>
+					</div>
+					<ul class="caution-list bullet-list bullet-list--txt bullet-type--js">
+						<li data-bullet="※" class="item">(*) 표시는 필수 입력 항목입니다.</li>
+						<li data-bullet="※" class="item">신청서 접수 및 교육 담당자의 승인까지 완료되어야 교육 진행이 확정됩니다. 접수 후 평균 7일 이내 기재하신 정보로 승인 메일이 발송됩니다.</li>
+					</ul>
+					<form action="">
+						<ul class="clause_list">
+							<li>
+								<h5>개인정보수집 동의</h5>
+								<div class="textarea_box_border">
+									<div class="textarea_box"><? include "../policy/privacy-text.html" ?></div>
+								</div>
+								<div class="agree_box mt_10">
+									<input type="checkbox" name="info33" value="1" id="info33" title="개인정보처리방침에 동의" class="mr_05" required />
+									<label for="info33">개인정보수집에 동의합니다. [필수]</label>
+								</div>
+							</li>
+						</ul>
+						<table class="table-form-01 type_b">
+							<tbody>
+								<tr>
+									<th>이름 <span class="text-danger">*</span></th>
+									<td>
+										<input type="text" name="uname" id="uname" title="이름" maxlength="50" class="input_for" placeholder="이름을 입력해주세요." required />
+									</td>
+								</tr>
+								<tr>
+									<th>업체명 <span class="text-danger">*</span></th>
+									<td>
+										<input type="text" name="company" id="company" title="업체명" class="input_for" placeholder="업체명을 입력해주세요." required />
+									</td>
+								</tr>
+								<tr>
+									<th>부서명</th>
+									<td>
+										<input type="text" name="team" id="team" title="부서명" class="input_for" placeholder="부서(팀)명을 입력해주세요." />
+									</td>
+								</tr>
+								<tr>
+									<th>직책</th>
+									<td>
+										<input type="text" name="position" id="position" title="직책" class="input_for" placeholder="직책을 입력해주세요." />
+									</td>
+								</tr>
+								<tr>
+									<th>연락처 <span class="text-danger">*</span></th>
+									<td>
+										<input type="tel" name="utel" id="utel" title="연락처" class="input_for" placeholder="'-'없이 입력해주세요." onkeyup="if(isNaN(this.value)) {alert('숫자만 입력해 주세요.');this.value=''};" required />
+									</td>
+								</tr>
+								<tr>
+									<th>이메일 <span class="text-danger">*</span></th>
+									<td>
+										<input type="email" name="email" id="email" title="이메일" class="input_for" placeholder="이메일을 입력해주세요." required />
+									</td>
+								</tr>
+								<tr class="pb-lg-0 pb-15">
+									<th>신청 교육 / 일정 <span class="text-danger">*</span></th>
+									<td>
+										<select class="sel_for" name="info1" title="구분" id="info1" required>
+											<option value="">신청 교육 / 일정</option>
+										</select>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="board_btn_bx text_center mt_30">
+							<input type="submit" value="신청하기" class="btn-type-01 form-btn" />
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+	</body>
+</html>

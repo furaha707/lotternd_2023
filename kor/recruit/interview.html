@@ -1,0 +1,158 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '4';
+    $P_dp2 = '2';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../../assets/css/recruit.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<!-- S : 인터뷰 리스트 -->
+			<section class="section py-lg-20 py-10">
+				<div class="container">
+					<div class="common-title wow fadeInDown">
+						People Interview<br />
+						<p class="desc">선배가 직접 들려주는 직무 인터뷰를 만나보세요. 예비 연구원분들께 생생한 조언을 전합니다.</p>
+					</div>
+					<div id="js-load" class="interview-list-wrap py-lg-20 py-10">
+						<!-- 배경 이미지 권장 사이즈 1400 x 360 -->
+
+						<a href="../recruit/interview__view01.html" class="box js-load" style="background: url('../../assets/images/sub/recruit/interview-bg1.jpg') no-repeat; background-size: cover">
+							<div class="txt-bx">
+								<div class="title">직접 만든 제품을<br />마주했을 때의 기쁨</div>
+								<div class="info">
+									<div class="department">파이 제품개발</div>
+									<div class="name">김혜리</div>
+								</div>
+							</div>
+						</a>
+						<a href="../recruit/interview__view02.html" class="box js-load" style="background: url('../../assets/images/sub/recruit/interview-bg2.jpg') no-repeat; background-size: cover">
+							<div class="txt-bx">
+								<div class="title">개발 의도를<br />소비자에게 전하는 일</div>
+								<div class="info">
+									<div class="department">HMR 제품개발</div>
+									<div class="name">전형석</div>
+								</div>
+							</div>
+						</a>
+						<a href="../recruit/interview__view03.html" class="box js-load" style="background: url('../../assets/images/sub/recruit/interview-bg3.jpg') no-repeat; background-size: cover">
+							<div class="txt-bx">
+								<div class="title">
+									식품 연구원으로서<br />
+									가장 큰 기회의 장
+								</div>
+								<div class="info">
+									<div class="department">외식 브랜드 제품개발</div>
+									<div class="name">이주성</div>
+								</div>
+							</div>
+						</a>
+						<a href="../recruit/interview__view04.html" class="box js-load" style="background: url('../../assets/images/sub/recruit/interview-bg4.jpg') no-repeat; background-size: cover">
+							<div class="txt-bx">
+								<div class="title">수백 개의 천연물에서<br />단 하나의 소재를 만나기까지</div>
+								<div class="info">
+									<div class="department">기능성 소재 연구</div>
+									<div class="name">강다영</div>
+								</div>
+							</div>
+						</a>
+						<a href="../recruit/interview__view05.html" class="box js-load" style="background: url('../../assets/images/sub/recruit/interview-bg5.jpg') no-repeat; background-size: cover">
+							<div class="txt-bx">
+								<div class="title">
+									더 나은 세상에<br />
+									기여할 포장재 연구
+								</div>
+								<div class="info">
+									<div class="department">패키지 연구개발</div>
+									<div class="name">이영우</div>
+								</div>
+							</div>
+						</a>
+						<a href="../recruit/interview__view06.html" class="box js-load" style="background: url('../../assets/images/sub/recruit/interview-bg6.jpg') no-repeat; background-size: cover">
+							<div class="txt-bx">
+								<div class="title">업계 전반에 걸친 <br />디자인 경험을 쌓을 수 있는 곳</div>
+								<div class="info">
+									<div class="department">패키지 디자인</div>
+									<div class="name">강예지</div>
+								</div>
+							</div>
+						</a>
+						<a href="../recruit/interview__view07.html" class="box js-load" style="background: url('../../assets/images/sub/recruit/interview-bg7.jpg') no-repeat; background-size: cover">
+							<div class="txt-bx">
+								<div class="title">
+									식품 안전의 실현에<br />
+									기여하는 일
+								</div>
+								<div class="info">
+									<div class="department">제조사 안전관리</div>
+									<div class="name">정기훈</div>
+								</div>
+							</div>
+						</a>
+						<a href="../recruit/interview__view08.html" class="box js-load" style="background: url('../../assets/images/sub/recruit/interview-bg8.jpg') no-repeat; background-size: cover">
+							<div class="txt-bx">
+								<div class="title">
+									직원들에게 항상<br />
+									열려 있는 창구의 역할
+								</div>
+								<div class="info">
+									<div class="department">인사 및 노무관리</div>
+									<div class="name">김성운</div>
+								</div>
+							</div>
+						</a>
+
+						<div class="more-btn-wrap py-lg-10 py-5">
+							<button type="button" class="more-btn">더보기 <i class="xi-plus-thin"></i></button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 인터뷰 리스트 -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+
+		<script>
+			$(window).on('load', function () {
+				load('#js-load', '4');
+
+				$('.more-btn').on('click', function () {
+					load('#js-load', '4', '#js-btn-wrap');
+				});
+			});
+			function load(id, cnt, btn) {
+				var girls_list = id + ' .js-load:not(.active)';
+				var girls_length = $(girls_list).length;
+				var girls_total_cnt;
+				if (cnt < girls_length) {
+					girls_total_cnt = cnt;
+				} else {
+					girls_total_cnt = girls_length;
+					$(btn).hide();
+				}
+				$(girls_list + ':lt(' + girls_total_cnt + ')').addClass('active');
+			}
+		</script>
+	</body>
+</html>

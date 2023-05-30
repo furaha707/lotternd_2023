@@ -1,0 +1,564 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// 연구분야
+.research-tab {
+	.tab-header {
+		.tab-item {
+			.link {
+				min-width: 200px;
+				@media (max-width: 1280px) {
+					min-width: 150px;
+				}
+				@include mdq-max(md) {
+					min-width: 95px;
+				}
+			}
+		}
+	}
+}
+
+.research-ban {
+	position: relative;
+	margin-bottom: 80px;
+	.img-bx {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		> img {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: auto;
+			height: auto;
+			min-height: 1000%;
+			max-width: none;
+			max-height: none;
+			transform: translate(-50%, -50%) scale(0.1);
+		}
+		&:after {
+			content: '';
+			display: block;
+			padding-bottom: 18.75%;
+			@include mdq-max(md) {
+				content: '';
+				display: block;
+				padding-bottom: 83.3333333333%;
+			}
+		}
+		// @include img-to-bg(percentage(360/1920));
+		// @include mdq-max(md) {
+		// 	@include img-to-bg(percentage(1200/1440));
+		// }
+	}
+	.tit-bx {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		padding: 0 20px;
+		.tit {
+			font-size: 2.375rem;
+			font-weight: 600;
+			line-height: 2.781rem;
+			text-align: center;
+			color: #111;
+			margin-bottom: 15px;
+		}
+		.txt {
+			font-size: 1.406rem;
+			font-weight: 300;
+			line-height: 2.219rem;
+			text-align: center;
+			color: #333;
+		}
+	}
+}
+
+.research-wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	.research-category {
+		flex: 0 0 20%;
+		max-width: 20%;
+		// @include mdq-max()
+		.cate-list {
+			.cate-item {
+				.link {
+					font-size: 1.5rem;
+					font-weight: 600;
+					text-align: left;
+					color: #999;
+					display: block;
+					padding-left: 0;
+					transition: all 0.5s;
+					margin-bottom: 15px;
+					@include mdq-max(md) {
+						font-size: 1rem;
+						margin-bottom: 10px;
+					}
+					&:before {
+						content: '';
+						opacity: 0;
+						transition: all 0.5s;
+					}
+				}
+				&:hover,
+				&.active {
+					.link {
+						position: relative;
+						font-weight: 600;
+						color: #111;
+						padding-left: 30px;
+						&:before {
+							content: '';
+							display: block;
+							position: absolute;
+							left: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							background-color: $color-1;
+							width: 22px;
+							height: 5px;
+							border-radius: 5px;
+							opacity: 1;
+						}
+						@include mdq-max(md) {
+							padding-left: 0;
+							&:before {
+								left: 0;
+								top: 0;
+								width: 5px;
+								height: 5px;
+								border-radius: 50%;
+							}
+						}
+					}
+				}
+			}
+			&.fixed {
+				position: fixed;
+				top: 200px;
+				left: 0;
+				margin-left: 13.5vw;
+				@media (max-width: 1600px) {
+					top: 190px;
+					margin-left: 4.5vw;
+				}
+				@include mdq-max(xl) {
+					top: 160px;
+					margin-left: 2.5vw;
+				}
+				@include mdq-max(md) {
+					top: 130px;
+					margin-left: 4vw;
+				}
+			}
+		}
+	}
+	.research-contents {
+		flex: 1 1 auto;
+		max-width: 100%;
+		.contents-list {
+			.contents-item {
+				margin-bottom: 5rem;
+				box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+				border-radius: 20px;
+				overflow: hidden;
+				.img-bx {
+					@include img-to-bg(percentage(460/1120));
+				}
+				.txt-bx {
+					padding: 50px;
+					@include mdq-max(md) {
+						padding: 20px;
+					}
+					.tit {
+						font-size: 1.594rem;
+						font-weight: 500;
+						line-height: 2.844rem;
+						text-align: left;
+						color: #111;
+						margin-bottom: 20px;
+					}
+					.des {
+						font-size: 1.125rem;
+						font-weight: 300;
+						line-height: 1.75rem;
+						text-align: left;
+						color: #555;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 연구성과 better-food
+.better-food__title {
+	font-size: 2.2rem;
+	font-weight: 500;
+	line-height: 3.469rem;
+	text-align: left;
+	color: #111;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	@include mdq-max(lg) {
+		margin-top: 50px;
+		font-size: 1.5rem;
+		line-height: 2.2rem;
+	}
+}
+
+.better-tit {
+	font-size: 2.469rem;
+	font-weight: 500;
+	line-height: 3.469rem;
+	text-align: center;
+	color: $color-1;
+	@include mdq-max(lg) {
+		font-size: 1.5rem;
+		line-height: 2.2rem;
+	}
+}
+
+.img_board_list {
+	&.type_food {
+		.img_box {
+			@include img-to-bg(100%);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+			border-radius: 20px;
+		}
+		.txt_box {
+			.tit {
+				text-align: center;
+			}
+		}
+	}
+	&.type_awards {
+		.img_box {
+			@include img-to-bg(percentage(990/1320));
+		}
+		.txt_box {
+			text-align: left;
+			padding-left: 0;
+			padding-right: 0;
+			margin-bottom: 20px;
+			.tit {
+				font-size: 1.625rem;
+				font-weight: 300;
+				color: #111;
+				white-space: pre-wrap;
+				overflow: initial;
+				word-break: break-word;
+				@include mdq-max(md) {
+					font-size: 1.4rem;
+				}
+			}
+			.txt {
+				font-weight: 500;
+				color: $color-1;
+				overflow: initial;
+				margin-top: 12px;
+			}
+			.des {
+				display: block;
+				font-size: 1rem;
+				line-height: 2.125rem;
+				color: #777;
+				margin-top: 8px;
+				height: auto;
+				line-height: inherit;
+				white-space: pre-wrap;
+				overflow: initial;
+			}
+		}
+	}
+}
+
+// 연구성과 better-life
+.table-info {
+	@include mdq-max(md) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.board-search-01 {
+	max-width: 480px;
+	border-bottom: none;
+	fieldset {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+	.input-type-01 {
+		border-bottom: 1px solid #ddd;
+	}
+	.select-bx {
+		position: relative;
+		flex: 0 0 30%;
+		max-width: 30%;
+		border-bottom: 1px solid #ddd;
+		.select-title {
+			height: 2.5rem;
+			line-height: 2.5rem;
+			text-align: left;
+			background-repeat: no-repeat;
+			background-position: calc(100% - 5px) center;
+			background-image: url(../images/icon/select_icon_2x.png);
+			@include text-truncate(1);
+			padding-right: 20px;
+			background-size: 15px;
+			&.on {
+				background-repeat: no-repeat;
+				background-position: calc(100% - 5px) center;
+				background-image: url(../images/icon/select_icon_up_2x.png);
+			}
+		}
+		.inner {
+			width: 100%;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+			padding: 10px;
+			position: absolute;
+			top: 45px;
+			left: 0;
+			display: none;
+			z-index: 30;
+			&.active {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			label {
+				width: 100%;
+				text-align: left;
+				span {
+					display: inline-block;
+					padding-left: 5px;
+					@include mdq-max(md) {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.section--04 {
+	&.life-section {
+		background: url('../images/main/section4-bg.jpg') no-repeat;
+		background-size: cover;
+		padding: 7rem 0;
+		.tit-wrap {
+			.tit {
+				color: white;
+			}
+			.txt {
+				color: white;
+			}
+		}
+	}
+	.tab-content-02 {
+		.swiper-container {
+			.swiper-wrapper {
+				height: auto !important;
+			}
+			.swiper-control {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 30px;
+				.swiper-pagination {
+					position: relative;
+					&-bullet {
+						width: 10px;
+						height: 10px;
+						margin: 0 4px;
+						background-color: white;
+						border: 1px solid #999;
+						opacity: 1;
+						&-active {
+							background-color: $color-1;
+							border: 1px solid $color-1;
+						}
+					}
+				}
+				.swiper-play {
+					cursor: pointer;
+					padding-top: 2px;
+					font-size: 18px;
+					@include mdq-max(md) {
+						padding-top: 1px;
+					}
+				}
+			}
+			.swiper-button {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 10;
+				&--prev {
+					left: 50px;
+				}
+				&--next {
+					right: 50px;
+				}
+				@include mdq-max(xl) {
+					&--prev {
+						left: 20px;
+					}
+					&--next {
+						right: 20px;
+					}
+				}
+				@include mdq-max(md) {
+					img {
+						width: 20px;
+					}
+					&--prev {
+						left: 10px;
+					}
+					&--next {
+						right: 10px;
+					}
+				}
+			}
+		}
+	}
+	.life-wrapper {
+		position: relative;
+	}
+	.life-inner {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		padding-bottom: 7rem;
+		padding-top: 3rem;
+		border-radius: 30px;
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		@media (max-width: 1280px) {
+			padding-bottom: 4.5rem;
+			padding-top: 1.8rem;
+		}
+		@include mdq-max(md) {
+			width: 85%;
+			padding: 3rem 1.5rem;
+			padding-bottom: 5rem;
+		}
+
+		&.view-inner {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+			@media (max-width: 1280px) {
+				padding-bottom: 3rem;
+				padding-top: 3rem;
+			}
+		}
+
+		.tit {
+			display: block;
+			font-size: 2.125rem;
+			line-height: 1.5;
+			font-weight: bold;
+			color: #222;
+			margin-bottom: 40px;
+		}
+		.txt {
+			font-size: 1.25rem;
+			font-weight: 300;
+			line-height: 1.875rem;
+			color: #555;
+			width: 80%;
+			margin: 0 auto;
+		}
+		.g-txt {
+			font-size: 1rem;
+		}
+		@media (max-width: 1280px) {
+			.tit {
+				font-size: 1.5rem;
+				line-height: 1.3;
+				margin-bottom: 30px;
+			}
+			.g-txt {
+				font-size: 0.9rem;
+				line-height: 1.3;
+			}
+		}
+		@include mdq-max(md) {
+			.txt {
+				font-size: 1rem;
+				line-height: 1.3rem;
+				height: auto;
+			}
+		}
+	}
+	@include mdq-max(xl) {
+		padding: 5rem 0;
+	}
+}
+
+.view-section {
+	position: relative;
+	@include mdq-max(xl) {
+		padding: 0 !important;
+	}
+	.img-bx {
+		@include img-to-bg(percentage(960/1920));
+		> img {
+			min-height: 1000vh;
+		}
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		&::after {
+			padding-bottom: 30%;
+		}
+
+		@media (max-width: 1400px) {
+			&::after {
+				padding-bottom: 60%;
+			}
+		}
+		@include mdq-max(md) {
+			&::after {
+				padding-bottom: 70%;
+			}
+		}
+		@include mdq-max(sm) {
+			&::after {
+				padding-bottom: 90%;
+			}
+		}
+		@media (max-width: 480px) {
+			&::after {
+				padding-bottom: 130%;
+			}
+		}
+		@media (max-width: 400px) {
+			&::after {
+				padding-bottom: 150%;
+			}
+		}
+	}
+}

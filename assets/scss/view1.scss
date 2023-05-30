@@ -1,0 +1,905 @@
+.board-box {
+	// 공통
+	div,
+	p,
+	span,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'SUIT' !important;
+	}
+	.View2-wrap {
+		.top-section {
+			width: 1400px;
+			height: 700px;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			@media screen and (max-width: 1440px) {
+				flex-direction: column;
+				align-items: center;
+				row-gap: 30px;
+				width: 100%;
+				height: auto;
+				padding-top: 30px;
+				background-size: cover;
+				background-position: center !important;
+				border-top-right-radius: 15px;
+				border-top-left-radius: 15px;
+			}
+			@media screen and (max-width: 1024px) {
+				row-gap: 10px;
+				padding: 0 15px;
+				padding-top: 30px;
+			}
+			.text {
+				width: 50%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				@media screen and (max-width: 1400px) {
+					width: 100%;
+					padding-top: 50px;
+				}
+				@media screen and (max-width: 1024px) {
+					height: auto;
+					padding-top: 20px;
+					padding-bottom: 15px;
+				}
+			}
+			.img {
+				width: 50%;
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+				@media screen and (max-width: 1400px) {
+					width: 100%;
+				}
+			}
+		}
+		.TopTitle {
+			font-size: 36px;
+			color: #fff;
+			text-align: center;
+			line-height: 1.1;
+			letter-spacing: -1.1px;
+			@media screen and (max-width: 1400px) {
+				font-size: 24px;
+			}
+			@media screen and (max-width: 1024px) {
+				font-size: 18px;
+			}
+		}
+		.Bottomtitle {
+			font-size: 70px;
+			color: #fff;
+			text-align: center;
+			letter-spacing: -1.1px;
+			line-height: 1.1;
+			margin-top: 8px;
+			@media screen and (max-width: 1400px) {
+				font-size: 50px;
+			}
+			@media screen and (max-width: 1024px) {
+				font-size: 24px;
+			}
+		}
+		.text-box {
+			padding: 50px;
+			border-bottom-left-radius: 35px;
+			border-bottom-right-radius: 35px;
+			@media screen and (max-width: 1400px) {
+				padding: 20px;
+			}
+		}
+		.white-box {
+			background-color: #fff;
+			border-radius: 25px;
+			padding: 25px 55px;
+			@media screen and (max-width: 1400px) {
+				padding: 25px 20px;
+			}
+			p {
+				font-size: 18px;
+				color: #555;
+				margin: 20px 0;
+				// letter-spacing: 0.7px;
+				@media screen and (max-width: 1400px) {
+					font-size: 16px;
+					line-height: 1.5;
+				}
+			}
+			.tit {
+				font-size: 22px;
+				color: #111;
+				// letter-spacing: 0.6px;
+				@media screen and (max-width: 1400px) {
+					font-size: 18px;
+				}
+			}
+		}
+		.tit-big {
+			text-align: center;
+			font-size: 32px !important;
+			color: #111 !important;
+			@media screen and (max-width: 1400px) {
+				font-size: 18px !important;
+			}
+		}
+	}
+	// 직꾸닭
+	.zzigu-wrap {
+		.top-section {
+			.img {
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 280px;
+					}
+					@media screen and (max-width: 320px) {
+						width: 200px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #a83534;
+		}
+	}
+	// 쏘스윗 카스테라
+	.castera-wrap {
+		.text-box {
+			background-color: #dab96e;
+		}
+		.top-section {
+			align-items: center;
+			.img {
+				img {
+					@media screen and (max-width: 390px) {
+						width: 130px;
+					}
+				}
+			}
+		}
+		.sequence-box {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 12px;
+			row-gap: 15px;
+			margin-bottom: 15px;
+			i {
+				font-size: 24px;
+				color: #a88374;
+				transform: rotate(90deg);
+			}
+			.item {
+				width: 110px;
+				height: 110px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				border-radius: 50%;
+				border: 1px solid #965f41;
+				background-color: #fff;
+				font-size: 18px;
+				text-align: center;
+				color: #813f1c;
+				font-weight: 600;
+				@media screen and (max-width: 390px) {
+					width: 90px;
+					height: 90px;
+					font-size: 16px;
+				}
+				@media screen and (max-width: 370px) {
+					width: 85px;
+					height: 85px;
+					font-size: 14px;
+				}
+				@media screen and (max-width: 350px) {
+					width: 80px;
+					height: 80px;
+					font-size: 12px;
+				}
+				p {
+					font-size: 14px;
+					margin: 0;
+					color: #813f1c;
+					@media screen and (max-width: 390px) {
+						font-size: 12px;
+					}
+					@media screen and (max-width: 350px) {
+						font-size: 11px;
+					}
+				}
+			}
+		}
+	}
+	// 더하다 Plus
+	.plus-wrap {
+		.top-section {
+			height: 600px;
+			@media screen and (max-width: 1024px) {
+				height: auto;
+			}
+			@media screen and (max-width: 390px) {
+				background-position: 55% 35% !important;
+			}
+			.text {
+				padding-right: 10%;
+				padding-bottom: 8%;
+				@media screen and (max-width: 1400px) {
+					padding-right: 0;
+					padding-bottom: 0;
+				}
+			}
+			.img {
+				margin-bottom: 20px;
+				img {
+					margin-bottom: 20px;
+					@media screen and (max-width: 1400px) {
+						width: 260px;
+					}
+					@media screen and (max-width: 390px) {
+						width: 120px;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #c0cab9;
+			.plus-img {
+				@media screen and (max-width: 480px) {
+					width: 200px;
+				}
+			}
+		}
+		.img-Wrap {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			column-gap: 15px;
+			row-gap: 15px;
+		}
+	}
+	// 리아미라클버거
+	.miracle-wrap {
+		.top-section {
+			align-items: center;
+			column-gap: 25px;
+			.text {
+				width: auto;
+			}
+			.img {
+				width: auto;
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 280px;
+						margin-bottom: 30px;
+					}
+					@media screen and (max-width: 1024px) {
+						width: 300px;
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 155px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #8caf8b;
+		}
+	}
+	// 트레이 롤만두
+	.rollmando-wrap {
+		.top-section {
+			align-items: center;
+			.text {
+				width: 70%;
+				@media screen and (max-width: 1024px) {
+					width: 100%;
+				}
+			}
+			.img {
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 270px;
+						margin-bottom: 30px;
+					}
+					@media screen and (max-width: 1024px) {
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 140px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #7ca42b;
+		}
+	}
+	// 칸타타 라떼홀릭
+	.cantata-wrap {
+		.top-section {
+			align-items: center;
+			@media screen and (max-width: 1024px) {
+				background-position: 30% 85% !important;
+			}
+			.text {
+				width: 50%;
+				margin-bottom: 12%;
+				@media screen and (max-width: 1400px) {
+					width: 100%;
+					margin-bottom: 0;
+				}
+			}
+			.img {
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 260px;
+						margin-bottom: 30px;
+					}
+					@media screen and (max-width: 1024px) {
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 140px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #7d5a47;
+		}
+	}
+	// 에센뽀득 부어스트 소세지
+	.sausage-wrap {
+		.top-section {
+			align-items: center;
+			@media screen and (max-width: 1400px) {
+				background-position: 50% 90% !important;
+			}
+			@media screen and (max-width: 1024px) {
+				background-position: 65% 85% !important;
+			}
+			.text {
+				width: 70%;
+				@media screen and (max-width: 1024px) {
+					width: 100%;
+				}
+			}
+			.img {
+				width: 40%;
+				padding-right: 15%;
+				margin-top: 5%;
+				@media screen and (max-width: 1400px) {
+					width: 100%;
+					padding-right: 0;
+					margin-top: 0;
+				}
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 260px;
+						margin-bottom: 30px;
+					}
+					@media screen and (max-width: 1024px) {
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 130px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #dfd6c7;
+		}
+	}
+	// 파스퇴르 우유
+	.milk-wrap {
+		.top-section {
+			align-items: center;
+			flex-direction: column;
+			height: 740px;
+			@media screen and (max-width: 1024px) {
+				height: auto;
+				background-position: 25% 85% !important;
+			}
+			.text {
+				width: 100%;
+				line-height: 1.2;
+				margin-top: 30px;
+				@media screen and (max-width: 1024px) {
+					margin-top: 20px;
+				}
+			}
+			.img {
+				width: 100%;
+				padding-right: 15%;
+				margin-bottom: 30px;
+				@media screen and (max-width: 1024px) {
+					padding-right: 0;
+					margin-bottom: 20px;
+				}
+				img {
+					@media screen and (max-width: 1024px) {
+						width: 300px;
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 152px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #a4c6ea;
+		}
+		.Common-img-box {
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		.diagram-list {
+			column-gap: 50px;
+			row-gap: 30px;
+			img {
+				&:nth-child(1) {
+					@media screen and (max-width: 390px) {
+						width: 200px;
+					}
+				}
+				&:nth-child(2) {
+					@media screen and (max-width: 1024px) {
+						transform: rotate(90deg);
+					}
+				}
+				&:nth-child(3) {
+					@media screen and (max-width: 390px) {
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+	// 파스퇴르 위드맘
+	.withmom-wrap {
+		.top-section {
+			align-items: center;
+			column-gap: 25px;
+			@media screen and (max-width: 1400px) {
+				background-position: 90% !important;
+			}
+			.text {
+				width: auto;
+				.Bottomtitle,
+				.Toptitle {
+					@media screen and (max-width: 1024px) {
+						color: #fff !important;
+						text-shadow: 0 0 5px BLACK;
+					}
+				}
+			}
+			.img {
+				width: 50%;
+				img {
+					margin-left: 50px;
+					@media screen and (max-width: 1400px) {
+						margin: 0 auto;
+						width: 250px;
+						margin-bottom: 30px;
+					}
+					@media screen and (max-width: 1024px) {
+						width: 300px;
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 120px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #e0aabe;
+		}
+	}
+	// 등심통돈까스
+	.dongas-wrap {
+		.top-section {
+			align-items: center;
+			column-gap: 25px;
+			@media screen and (max-width: 1400px) {
+				background-position: 70% !important;
+			}
+			.text {
+				width: auto;
+			}
+			.img {
+				width: 33%;
+				margin-top: 10%;
+				@media screen and (max-width: 1400px) {
+					margin-top: 0;
+				}
+				img {
+					margin-left: 80px;
+					@media screen and (max-width: 1400px) {
+						margin: 0 auto;
+						width: 250px;
+						margin-bottom: 30px;
+					}
+					@media screen and (max-width: 1024px) {
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 150px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #714b32;
+		}
+	}
+	// 칙촉 시크릿
+	.chickchok-wrap {
+		.top-section {
+			align-items: center;
+			flex-direction: column;
+			height: 721px;
+			@media screen and (max-width: 1400px) {
+				height: auto;
+				background-position: 70% 90% !important;
+			}
+			@media screen and (max-width: 1024px) {
+				background-position: 70% 90% !important;
+			}
+			.text {
+				width: 100%;
+				line-height: 1.2;
+				margin-top: 5%;
+				@media screen and (max-width: 1024px) {
+					margin-top: 20px;
+				}
+				.Bottomtitle {
+					margin-top: 15px;
+					@media screen and (max-width: 1024px) {
+						margin-top: 8px;
+					}
+				}
+			}
+			.img {
+				width: 100%;
+				margin-bottom: 50px;
+				margin-left: 12%;
+				@media screen and (max-width: 1024px) {
+					margin-bottom: 25px;
+					margin-left: 7%;
+				}
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 460px;
+					}
+					@media screen and (max-width: 1024px) {
+						width: 300px;
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 200px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #846255;
+		}
+	}
+	// 깨수깡
+	.ggasuggang-wrap {
+		.top-section {
+			align-items: center;
+			flex-direction: column;
+			@media screen and (max-width: 480px) {
+				background-position: 50% 70% !important;
+			}
+			.text {
+				width: 100%;
+				line-height: 1.2;
+				margin-top: 5%;
+				@media screen and (max-width: 1024px) {
+					margin-top: 20px;
+				}
+				.Bottomtitle {
+					margin-top: 15px;
+					@media screen and (max-width: 1024px) {
+						margin-top: 8px;
+					}
+				}
+			}
+			.img {
+				width: 100%;
+				margin-bottom: 50px;
+				@media screen and (max-width: 1024px) {
+					margin-bottom: 25px;
+				}
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 380px;
+					}
+					@media screen and (max-width: 1024px) {
+						width: 300px;
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 220px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #fad387;
+		}
+		.material-box {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			column-gap: 40px;
+			row-gap: 30px;
+			margin-top: 35px;
+			@media screen and (max-width: 1024px) {
+				column-gap: 20px;
+				row-gap: 15px;
+			}
+			.item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				row-gap: 15px;
+				@media screen and (max-width: 1024px) {
+					width: 28%;
+				}
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+				p {
+					font-size: 18px;
+					color: #111;
+					text-align: center;
+					margin: 0;
+					font-weight: 500;
+					@media screen and (max-width: 1024px) {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	// 에어 베이크드 포테이토
+	.airbaked-wrap {
+		.top-section {
+			align-items: center;
+			@media screen and (max-width: 1024px) {
+				background-position: 30% 85% !important;
+			}
+			.text {
+				width: 50%;
+				padding-left: 13%;
+				@media screen and (max-width: 1400px) {
+					width: 100%;
+					padding-left: 0;
+				}
+				.Toptitle {
+					line-height: 1.4;
+				}
+				.Bottomtitle {
+					margin-top: 15px;
+				}
+			}
+			.img {
+				width: 50%;
+				margin-right: 10%;
+				margin-top: 5%;
+				@media screen and (max-width: 1400px) {
+					width: 100%;
+					padding-right: 0;
+					margin-top: 0;
+				}
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 400px;
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 1024px) {
+						width: 300px;
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 150px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #999999;
+		}
+	}
+	// 자일리톨 알파 프로폴리스
+	.zilitol-wrap {
+		.top-section {
+			align-items: center;
+			@media screen and (max-width: 1024px) {
+				background-position: 100% 100% !important;
+			}
+			.text {
+				width: 75%;
+				margin-left: 5%;
+				@media screen and (max-width: 1024px) {
+					width: 100%;
+					margin-left: 0;
+				}
+				.Toptitle {
+					line-height: 1.4;
+				}
+				.Bottomtitle {
+					margin-top: 15px;
+					@media screen and (max-width: 1024px) {
+						margin-top: 8px;
+					}
+				}
+			}
+			.img {
+				width: 50%;
+				margin-right: 11%;
+				margin-top: 10%;
+				@media screen and (max-width: 1400px) {
+					width: 100%;
+					margin-right: 0;
+					margin-top: 0;
+				}
+				img {
+					@media screen and (max-width: 1400px) {
+						width: 265px;
+						margin-bottom: 30px;
+					}
+					@media screen and (max-width: 1024px) {
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 110px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #fad387;
+			p {
+				letter-spacing: 0.5px;
+			}
+			.tit {
+				letter-spacing: 0.5px;
+			}
+		}
+	}
+	// 밀크푸딩&산딸기
+	.pudding-wrap {
+		.top-section {
+			align-items: center;
+			.text {
+				width: 100%;
+				margin-left: 4%;
+				@media screen and (max-width: 1024px) {
+					margin-left: 0;
+				}
+				.Toptitle {
+					line-height: 1.4;
+				}
+				.Bottomtitle {
+					margin-top: 15px;
+					@media screen and (max-width: 1024px) {
+						margin-top: 8px;
+					}
+				}
+			}
+			.img {
+				width: 80%;
+				height: 100%;
+				position: relative;
+				margin-top: 10%;
+				@media screen and (max-width: 1400px) {
+					width: 100%;
+					margin-right: 0;
+					margin-top: 0;
+				}
+				img {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: -30%;
+					@media screen and (max-width: 1400px) {
+						position: unset;
+						transform: translateY(0);
+						width: 400px;
+						margin-bottom: 30px;
+					}
+					@media screen and (max-width: 1024px) {
+						width: 300px;
+						margin-bottom: 20px;
+					}
+					@media screen and (max-width: 480px) {
+						width: 200px;
+					}
+				}
+			}
+		}
+		.text-box {
+			background-color: #f8bdbd;
+			p {
+				letter-spacing: 0.5px;
+			}
+			.tit {
+				letter-spacing: 0.5px;
+			}
+		}
+		.white-box-sequence {
+			padding: 25px 40px !important;
+			@media screen and (max-width: 1400px) {
+				padding: 15px !important;
+			}
+		}
+		.sequence-box {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			column-gap: 3px;
+			row-gap: 15px;
+			margin: 15px 0;
+			@media screen and (max-width: 1400px) {
+				justify-content: flex-start;
+			}
+			@media screen and (max-width: 1024px) {
+				column-gap: 15px;
+			}
+			.item {
+				width: 102px;
+				height: 102px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				border-radius: 50%;
+				border: 1px solid #fca4a8;
+				background-color: #fff;
+				font-size: 16px;
+				text-align: center;
+				color: #cc5351;
+				font-weight: 600;
+				line-height: 1.2;
+				@media screen and (max-width: 380px) {
+					width: 85px;
+					height: 85px;
+					font-weight: 14px;
+				}
+				p {
+					font-size: 12px;
+					margin: 0;
+					color: #cc5351;
+					line-height: 1.4;
+					margin-top: 3px;
+				}
+			}
+		}
+	}
+}

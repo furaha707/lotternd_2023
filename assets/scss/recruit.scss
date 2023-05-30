@@ -1,0 +1,945 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// 공통
+.common-title {
+	font-size: rem(38);
+	text-align: center;
+	color: $color-1;
+	font-weight: 500;
+	line-height: 1.4;
+	@include mdq-max(lg) {
+		font-size: rem(28);
+	}
+	.desc {
+		font-size: rem(20);
+		color: $gray-3;
+		line-height: 1.5;
+		text-align: center;
+		margin-top: 15px;
+		font-weight: 300;
+		@include mdq-max(lg) {
+			font-size: rem(18);
+		}
+	}
+}
+
+// 인재상
+.talent-icon-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: em(80);
+	@include mdq-max(lg) {
+		flex-direction: column;
+		row-gap: em(25);
+	}
+	.item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: em(10);
+		.icon {
+			img {
+				@include mdq-max(lg) {
+					display: block;
+					margin: 0 auto;
+				}
+				@include mdq-max(md) {
+					width: 60%;
+				}
+			}
+		}
+		.title {
+			font-size: rem(24);
+			color: $gray-1;
+			font-weight: 500;
+			text-align: center;
+			&-sub {
+				font-size: rem(18);
+				color: $gray-5;
+				font-weight: 400;
+			}
+		}
+		.description {
+			font-size: rem(18);
+			color: $gray-5;
+			text-align: center;
+			font-weight: 300;
+			line-height: 1.3;
+			margin-top: 5px;
+		}
+	}
+}
+.arrow-img {
+	@include mdq-max(md) {
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 60%;
+		}
+	}
+}
+.diagram-wrap {
+	.inner {
+		position: relative;
+		.img {
+			margin: 0 auto;
+		}
+		.img-center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+// 인사제도
+.system-grade-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 3%;
+	@include mdq-max(lg) {
+		flex-direction: column;
+		row-gap: em(50);
+	}
+	.item {
+		width: 48.5%;
+		@include mdq-max(lg) {
+			width: 100%;
+		}
+		.title {
+			font-size: rem(22);
+			font-weight: 600;
+			color: $gray-1;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		.box {
+			.img-bx {
+				border: 1px solid #d9d9d9;
+				border-bottom: 0;
+				border-top-right-radius: 30px;
+				border-top-left-radius: 30px;
+				padding: em(40);
+				min-height: 616px;
+				@include mdq-max(lg) {
+					min-height: auto;
+				}
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+			}
+			.txt-bx {
+				background-color: #f2f2f2;
+				border: 1px solid #f2f2f2;
+				border-bottom-left-radius: 30px;
+				border-bottom-right-radius: 30px;
+				padding: em(30) em(40);
+				height: 173px;
+				@include mdq-max(lg) {
+					height: auto;
+					padding: em(20) em(15);
+				}
+				.desc {
+					font-size: rem(18);
+					line-height: 2;
+					color: $gray-5;
+					.font-weight-bold {
+						font-weight: 600 !important;
+						color: #111;
+					}
+					@include mdq-max(lg) {
+						font-size: rem(16);
+					}
+				}
+			}
+		}
+	}
+}
+
+.system-process-wrap {
+	.item-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 3%;
+		@include mdq-max(lg) {
+			flex-direction: column;
+			row-gap: em(50);
+		}
+		.item {
+			width: 48.5%;
+			@include mdq-max(lg) {
+				width: 100%;
+			}
+			.title {
+				font-size: rem(22);
+				font-weight: 600;
+				color: $gray-1;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			.box {
+				> img {
+					display: block;
+					margin: 0 auto;
+				}
+				.box-list {
+					width: 100%;
+					max-width: 396px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: em(36) 0;
+					background-color: #f2f2f2;
+					border-radius: 30px;
+					font-size: rem(18);
+					color: $gray-5;
+					text-align: center;
+					position: relative;
+					margin: 0 auto;
+					margin-bottom: 40px;
+					@include mdq-max(lg) {
+						padding: em(25) 0;
+						margin-bottom: 30px;
+					}
+					&:last-child {
+						margin-bottom: 0;
+						&::after {
+							display: none;
+						}
+					}
+					&::after {
+						content: '';
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 1px;
+						height: 40px;
+						background: #d9d9d9;
+						@include mdq-max(lg) {
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.system-education-wrap {
+	.wrap {
+		.box {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			padding: em(40);
+			border: 1px solid #d9d9d9;
+			border-radius: 30px;
+			margin-bottom: 10px;
+			@include mdq-max(lg) {
+				flex-direction: column;
+				align-items: flex-start;
+				padding: em(40) em(20);
+			}
+			.number {
+				width: 10%;
+				font-size: rem(60);
+				color: rgba(217, 217, 217, 0.65);
+				font-weight: 700;
+				@include mdq-max(lg) {
+					width: 100%;
+					font-size: rem(40);
+				}
+			}
+			.tit {
+				font-size: rem(24);
+				color: $color-1;
+				font-weight: 500;
+			}
+			.tit-sub {
+				font-size: rem(20);
+				font-weight: 300;
+				color: $gray-1;
+				padding: 5px 0;
+				display: block;
+			}
+			.desc {
+				font-size: rem(18);
+				color: $gray-5;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+// 복리후생
+.benefit-system-wrap {
+	.list-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 10px;
+		@include mdq-max(lg) {
+			flex-wrap: wrap;
+			row-gap: 10px;
+		}
+		.circle {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background-color: #f2f2f2;
+			font-size: rem(18);
+			color: $gray-3;
+			font-weight: 500;
+			@include mdq-max(lg) {
+				width: 150px;
+				height: 150px;
+			}
+			@include mdq-max(sm) {
+				width: 135px;
+				height: 135px;
+			}
+		}
+	}
+}
+.benefit-wrap {
+	.list-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 10px;
+		row-gap: 10px;
+		@include mdq-max(md) {
+			column-gap: 2%;
+		}
+		.box {
+			width: 24%;
+			border: 1px solid #d9d9d9;
+			border-radius: 30px;
+			height: 280px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			row-gap: em(15);
+			padding: 0 em(40);
+			padding-top: em(40);
+			@include mdq-max(lg) {
+				width: 32.5%;
+			}
+			@include mdq-max(md) {
+				width: 49%;
+				padding: 0 em(20);
+				padding-top: em(40);
+			}
+			@include mdq-max(sm) {
+				height: 260px;
+			}
+			.icon {
+				height: 60px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img {
+					display: block;
+					margin: 0 auto;
+					@include mdq-max(sm) {
+						width: 50%;
+					}
+				}
+				&-1 {
+					width: 58px;
+				}
+				&-2 {
+					width: 60px;
+				}
+				&-3 {
+					width: 60px;
+				}
+				&-4 {
+					width: 59px;
+				}
+				&-5 {
+					width: 60px;
+				}
+				&-6 {
+					width: 59px;
+				}
+				&-7 {
+					width: 60px;
+				}
+				&-8 {
+					width: 60px;
+				}
+				&-9 {
+					width: 54px;
+				}
+				&-10 {
+					width: 60px;
+				}
+				&-11 {
+					width: 60px;
+				}
+				&-12 {
+					width: 58px;
+				}
+			}
+			.title-bx {
+				height: 45%;
+			}
+			.title {
+				font-size: rem(22);
+				color: $gray-1;
+				font-weight: 400;
+				text-align: center;
+				margin-top: 15px;
+			}
+			.bullet-list {
+				width: 100%;
+				height: 55%;
+			}
+			.item {
+				font-size: rem(17);
+				color: $gray-5;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+// 채용 프로세스
+.process-box {
+	border: 1px solid $gray-a;
+	border-radius: 30px;
+	padding: em(60) em(20);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.list {
+		padding-left: 30px;
+		background: url(../images/sub/recruit/ck-icon.png) no-repeat;
+		background-size: 16px 14px;
+		background-position: left center;
+		font-size: rem(18);
+		color: $gray-3;
+		font-weight: 400;
+		margin-bottom: 8px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.process-deal-wrap {
+	.wrap {
+		display: flex;
+		column-gap: 2%;
+		flex-wrap: wrap;
+		row-gap: em(20);
+		.box {
+			display: flex;
+			align-items: center;
+			border: 1px solid #d9d9d9;
+			border-radius: 30px;
+			padding: em(30) 0;
+			width: 49%;
+			@include mdq-max(lg) {
+				width: 100%;
+				padding: em(30) em(15);
+			}
+			.title {
+				width: 20%;
+				font-size: rem(20);
+				color: $color-1;
+				font-weight: 600;
+				position: relative;
+				padding-left: em(30);
+				@include mdq-max(lg) {
+					width: 30%;
+					padding-left: 0;
+					text-align: center;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 0;
+					width: 1px;
+					height: 16px;
+					background: $gray-c;
+				}
+			}
+			.cont {
+				padding-left: 30px;
+				font-size: rem(19);
+				color: $gray-5;
+				@include mdq-max(lg) {
+					width: 70%;
+					padding-left: 5%;
+					line-height: 1.2;
+				}
+			}
+		}
+	}
+}
+
+.process-wrap {
+	.wrap {
+		.tit {
+			font-size: rem(20);
+			color: $color-1;
+			font-weight: 500;
+		}
+		.list-box {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 7px;
+			row-gap: 10px;
+			.circle {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 140px;
+				height: 140px;
+				border-radius: 50%;
+				background-color: #f2f2f2;
+				text-align: center;
+				font-size: rem(16);
+				color: $gray-5;
+				font-weight: 300;
+				@include mdq-max(sm) {
+					width: 120px;
+					height: 120px;
+				}
+				@include mdq-max(xxs) {
+					width: 100px;
+					height: 100px;
+				}
+			}
+			i {
+				font-size: rem(18);
+				color: #d9d9d9;
+			}
+		}
+	}
+	.info-box {
+		border: 1px solid #d9d9d9;
+		border-radius: 30px;
+		padding: em(40);
+		.text {
+			font-size: rem(16);
+			color: rgba(85, 85, 85, 0.8);
+			font-weight: 300;
+			line-height: 1.4;
+			.num {
+				font-size: rem(10);
+				display: inline-block;
+				padding-right: 3px;
+			}
+		}
+	}
+}
+
+.process-info-wrap {
+	.wrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		column-gap: em(80);
+		@include mdq-max(md) {
+			flex-direction: column;
+			align-items: center;
+			row-gap: em(30);
+		}
+		.item {
+			.title-box {
+				width: 240px;
+				height: 240px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: rem(20);
+				font-weight: 600;
+				color: $white;
+				text-align: center;
+				position: relative;
+				margin-bottom: 32px;
+				@include mdq-max(lg) {
+					width: 200px;
+					height: 200px;
+				}
+				&--1 {
+					background: url(../images/sub/recruit/process-bg1.png) no-repeat;
+					background-size: cover;
+				}
+				&--2 {
+					background: url(../images/sub/recruit/process-bg2.png) no-repeat;
+					background-size: cover;
+				}
+				&--3 {
+					background: url(../images/sub/recruit/process-bg3.png) no-repeat;
+					background-size: cover;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					top: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 1px;
+					height: 32px;
+					background: #d9d9d9;
+				}
+			}
+			.list-box {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				.box {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					max-width: 200px;
+					width: 100%;
+					height: 54px;
+					border: 1px solid #d9d9d9;
+					border-radius: 27px;
+					font-size: rem(16);
+					color: $gray-5;
+					font-weight: 300;
+					position: relative;
+					margin-bottom: 10px;
+					&::after {
+						content: '';
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 1px;
+						height: 10px;
+						background: #d9d9d9;
+					}
+					&:last-child {
+						&::after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 인터뷰
+.interview-list-wrap {
+	.box {
+		width: 100%;
+		height: 360px;
+		border-radius: 30px;
+		padding: em(80);
+		margin-bottom: 40px;
+		background-position: 80% center !important;
+		transition: 0.2s;
+		display: none;
+		&.active {
+			display: block;
+		}
+		&:hover {
+			@include mdq-min(md) {
+				box-shadow: 0px 4px 6px 3px #9e9e9f7a;
+				border: 3px solid $color-1;
+			}
+		}
+		@include mdq-max(lg) {
+			padding: em(40);
+			display: flex;
+			flex-direction: column;
+			// justify-content: flex-end;
+		}
+		@include mdq-max(md) {
+			height: 200px;
+			padding: em(40) em(30);
+			position: relative;
+			margin-bottom: 20px;
+		}
+		@include mdq-max(sm) {
+			height: 170px;
+		}
+		.txt-bx {
+			z-index: 1;
+			.title {
+				font-size: rem(35);
+				line-height: 1.4;
+				color: $gray-2;
+				font-weight: 600;
+				@include mdq-max(lg) {
+					font-size: rem(24);
+					line-height: 1.3;
+				}
+				@include mdq-max(md) {
+					width: 50%;
+					font-size: rem(18);
+					line-height: 1.2;
+				}
+			}
+			.info {
+				display: flex;
+				align-items: center;
+				column-gap: 20px;
+				margin-top: em(50);
+				@include mdq-max(md) {
+					column-gap: 12px;
+				}
+				@include mdq-max(sm) {
+					margin-top: 10px;
+				}
+				.department {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 10px 25px;
+					border-radius: 35px;
+					background-color: $color-1;
+					color: $white;
+					font-size: rem(18);
+					font-weight: 300;
+					@include mdq-max(md) {
+						font-size: rem(15);
+						padding: 3px 7px;
+					}
+				}
+				.name {
+					font-size: rem(22);
+					color: $gray-3;
+					font-weight: 500;
+					letter-spacing: 8px;
+					@include mdq-max(md) {
+						font-size: rem(20);
+					}
+				}
+			}
+		}
+	}
+}
+.more-btn-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.more-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 202px;
+		height: 60px;
+		border-radius: 30px;
+		background-color: $gray-2;
+		font-size: rem(18);
+		color: $white;
+		column-gap: 15px;
+		i {
+			font-size: rem(20);
+			transition: 0.4s;
+		}
+		&:hover {
+			i {
+				transform: rotate(360deg);
+			}
+		}
+	}
+}
+
+// 인터뷰 상세
+.interviewer-wrap {
+	.interviewer-box {
+		width: 100%;
+		height: 378px;
+		border-radius: 30px;
+		padding: em(80);
+		background-color: #f1f1f1;
+		display: flex;
+		align-items: center;
+		position: relative;
+		@include mdq-max(lg) {
+			padding: em(40);
+			height: auto;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 0;
+		}
+		@include mdq-max(sm) {
+			padding: em(40) em(20) 0 em(20);
+		}
+		.txt-bx {
+			z-index: 1;
+			.title {
+				font-size: rem(45);
+				line-height: 1.4;
+				color: $gray-2;
+				font-weight: 400;
+				@include mdq-max(lg) {
+					font-size: rem(24);
+					line-height: 1.3;
+				}
+			}
+			.info {
+				display: flex;
+				align-items: center;
+				column-gap: 20px;
+				margin-top: em(50);
+				@include mdq-max(md) {
+					column-gap: 12px;
+				}
+				@include mdq-max(sm) {
+					margin-top: 10px;
+				}
+				.department {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 10px 25px;
+					border-radius: 35px;
+					background-color: $color-1;
+					color: $white;
+					font-size: rem(18);
+					font-weight: 300;
+					@include mdq-max(md) {
+						padding: 10px 15px;
+					}
+				}
+				.name {
+					font-size: rem(22);
+					color: $gray-3;
+					font-weight: 500;
+					letter-spacing: 8px;
+				}
+			}
+		}
+		.img-bx {
+			position: absolute;
+			bottom: 0;
+			left: 65%;
+			width: em(355);
+			@include mdq-max(lg) {
+				position: unset;
+				margin-left: auto;
+				margin-right: 0;
+			}
+			@include mdq-max(sm) {
+				width: 60%;
+				margin: 0 0 0 auto;
+			}
+			.people {
+				@include img-to-bg(percentage(413/355));
+			}
+		}
+	}
+}
+
+.interviewer-qa {
+	.question {
+		font-size: rem(22);
+		color: $gray-2;
+		font-weight: 700;
+		.number {
+			color: $color-1;
+			display: inline-block;
+		}
+	}
+	.answer {
+		font-size: rem(16);
+		color: $gray-5;
+		font-weight: 300;
+		margin-top: em(15);
+	}
+}
+.interviewer-banner {
+	display: flex;
+	column-gap: 2px;
+	.img-bx {
+		width: calc(50% - 1px);
+		overflow: hidden;
+		&:first-child {
+			border-top-left-radius: 30px;
+			border-bottom-left-radius: 30px;
+			@include mdq-max(lg) {
+				border-top-left-radius: 15px;
+				border-bottom-left-radius: 15px;
+			}
+		}
+		&:last-child {
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+			@include mdq-max(lg) {
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+			}
+		}
+	}
+}
+
+// 입사지원
+.apply-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: em(30);
+	.icon {
+		img {
+			@include mdq-max(lg) {
+				display: block;
+				margin: 0 auto;
+				width: 60%;
+			}
+		}
+	}
+	.text {
+		font-size: rem(24);
+		line-height: 1.4;
+		color: $gray-1;
+		font-weight: 300;
+		text-align: center;
+		@include mdq-max(lg) {
+			font-size: rem(20);
+		}
+	}
+	.btn-type-01 {
+		max-width: 272px;
+		background-size: 25px 13px;
+		background-position: 80% center;
+		padding: 0 25px;
+		font-size: rem(18);
+		background-color: $gray-2;
+		border: 1px solid $gray-1;
+		@include mdq-max(lg) {
+			max-width: 230px;
+			height: 45px;
+		}
+	}
+}
+
+.recruit-btn {
+	max-width: 202px;
+	background-size: 25px 13px;
+	background-position: 80% center;
+	padding: 0 25px;
+	font-size: 1.125rem;
+}

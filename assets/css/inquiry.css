@@ -1,0 +1,221 @@
+/* Made by Masstige */
+.inquiry-tit-bx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+@media all and (max-width: 1024px) {
+  .inquiry-tit-bx {
+    flex-direction: column;
+    row-gap: 20px;
+    padding-bottom: 30px;
+  }
+}
+.inquiry-tit-bx .tit {
+  font-size: 2.375rem;
+  font-weight: 500;
+  line-height: 3.469rem;
+  color: #da291c;
+}
+@media all and (max-width: 1024px) {
+  .inquiry-tit-bx .tit {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+}
+.inquiry-tit-bx .tit--sub {
+  font-size: 2.1875rem;
+  text-align: center;
+  color: #111;
+  line-height: 1.4;
+}
+@media all and (max-width: 1024px) {
+  .inquiry-tit-bx .tit--sub {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+}
+.inquiry-tit-bx .txt {
+  font-size: 1.3125rem;
+  font-weight: 300;
+  line-height: 2.219rem;
+  text-align: left;
+  color: #333;
+}
+@media all and (max-width: 1024px) {
+  .inquiry-tit-bx .txt {
+    font-size: 1.125rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .inquiry-icon {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.caution-list {
+  border-radius: 30px;
+  background-color: #f2f2f2;
+  padding: 30px;
+  margin-bottom: 60px;
+}
+@media all and (max-width: 1024px) {
+  .caution-list {
+    padding: 20px;
+  }
+}
+.caution-list .item {
+  color: rgba(85, 85, 85, 0.8);
+  margin-bottom: 3px;
+}
+.caution-list .item:last-child {
+  margin-bottom: 0;
+}
+
+.inquiry-section .clause_list {
+  padding-bottom: 30px;
+}
+@media all and (max-width: 1024px) {
+  .inquiry-section .clause_list {
+    padding-bottom: 0;
+  }
+}
+.inquiry-section .clause_list li .textarea_box_border {
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.inquiry-section .clause_list li .textarea_box::-webkit-scrollbar {
+  width: 7px;
+}
+.inquiry-section .clause_list li .textarea_box::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 7px;
+}
+.inquiry-section .clause_list li .textarea_box::-webkit-scrollbar-track {
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+.inquiry-section .table-form-01 tr {
+  display: block;
+}
+@media all and (max-width: 1024px) {
+  .inquiry-section .table-form-01 tr {
+    padding: 0;
+    border: 0;
+  }
+}
+.inquiry-section .table-form-01 tr th {
+  padding: 0 10px;
+}
+@media all and (max-width: 1024px) {
+  .inquiry-section .table-form-01 tr th {
+    padding: 0;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+  }
+}
+.inquiry-section .table-form-01 tr td {
+  padding: 8px 10px 30px 10px;
+}
+@media all and (max-width: 1024px) {
+  .inquiry-section .table-form-01 tr td {
+    padding: 0;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 1200px) {
+  .inquiry-section .table-form-01 tr td {
+    width: 82vw;
+  }
+}
+@media (max-width: 960px) {
+  .inquiry-section .table-form-01 tr td {
+    width: 90vw;
+  }
+}
+.inquiry-section .table-form-01 .input_for,
+.inquiry-section .table-form-01 .sel_for {
+  padding: 0 20px;
+}
+.inquiry-section .table-form-01 .sel_for {
+  color: #666;
+  font-weight: 300;
+}
+.inquiry-section .table-form-01 .area_for {
+  padding: 20px;
+}
+.inquiry-section .file_box {
+  padding-bottom: 30px;
+}
+.inquiry-section .board_btn_bx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+}
+.inquiry-section .btn-type-01 {
+  max-width: 202px;
+  background-size: 25px 13px;
+  background-position: 80% center;
+  padding: 0 25px;
+  font-size: 1.125rem;
+}
+.inquiry-section .download-btn {
+  max-width: 230px;
+  background-size: 0;
+  justify-content: center;
+}
+
+.edu-info-box {
+  padding: 3.125em;
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
+}
+@media all and (max-width: 1024px) {
+  .edu-info-box {
+    padding: 1.875em 1.25em;
+  }
+}
+.edu-info-box .list {
+  display: flex;
+  margin-bottom: 7px;
+}
+.edu-info-box .list:last-child {
+  margin-bottom: 0;
+}
+.edu-info-box .list .tit {
+  width: 16%;
+  font-size: 1.125rem;
+  color: #111;
+  font-weight: 600;
+}
+@media all and (max-width: 1024px) {
+  .edu-info-box .list .tit {
+    font-size: 1rem;
+    width: 30%;
+  }
+}
+.edu-info-box .list .desc {
+  font-size: 1.125rem;
+  color: #555;
+  font-weight: 300;
+}
+.edu-info-box .list .desc .underlined {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+@media all and (max-width: 1024px) {
+  .edu-info-box .list .desc {
+    width: 70%;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+/*# sourceMappingURL=inquiry.css.map */

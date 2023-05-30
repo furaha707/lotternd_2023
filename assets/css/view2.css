@@ -1,0 +1,118 @@
+.board-box .view2-wrapper .border-round-box {
+  border: 8px solid #f2f2f2;
+  border-radius: 25px;
+  padding: 20px;
+  margin-top: 80px;
+}
+.board-box .view2-wrapper .bg-gray-box {
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  padding: 40px;
+  margin-top: 50px;
+}
+.board-box .view2-wrapper .tit-bold {
+  font-size: 28px;
+  font-weight: bold;
+}
+.board-box .view2-wrapper .des {
+  font-size: 18px;
+  color: #555555;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.board-box .view2-wrapper p {
+  margin: 20px 0;
+}
+.board-box .view2-wrapper .flex-bx {
+  margin: 50px 0;
+}
+.board-box .view2-wrapper .d-flex {
+  margin-bottom: 20px;
+}
+.board-box .view2-wrapper .deco-line {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: #da291c;
+}
+.board-box .view2-wrapper .sub-tit {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1400px) {
+  .board-box .view2-wrapper .flex-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .board-box .view2-wrapper .flex-bx .img {
+    flex: 1 0 40%;
+    max-width: 40%;
+  }
+  .board-box .view2-wrapper .flex-bx .text-bx {
+    flex: 1 0 60%;
+    max-width: 60%;
+    padding-left: 70px;
+  }
+  .board-box .view2-wrapper .flex-reverse {
+    flex-direction: row-reverse;
+  }
+  .board-box .view2-wrapper .flex-reverse .img {
+    text-align: right;
+  }
+  .board-box .view2-wrapper .flex-reverse .text-bx {
+    padding-left: 0;
+    padding-right: 80px;
+  }
+  .board-box .view2-wrapper .flex-bx--small .img {
+    flex: 1 0 30%;
+    max-width: 30%;
+  }
+  .board-box .view2-wrapper .flex-bx--small .text-bx {
+    flex: 1 1 auto;
+    width: 1%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .board-box .view2-wrapper .border-round-box {
+    padding: 50px 80px;
+  }
+  .board-box .view2-wrapper .d-inline-lg {
+    display: inline-block;
+  }
+  .board-box .view2-wrapper .d-mo {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .board-box .view2-wrapper .d-flex {
+    display: block !important;
+  }
+  .board-box .view2-wrapper .tit-bold {
+    font-size: 22px;
+  }
+  .board-box .view2-wrapper .des {
+    font-size: 16px;
+  }
+  .board-box .view2-wrapper .img-small {
+    width: 70%;
+  }
+  .board-box .view2-wrapper .d-pc {
+    display: none;
+  }
+  .board-box .view2-wrapper .d-mo {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 560px) {
+  .board-box .view2-wrapper .img-small {
+    width: 80%;
+  }
+  .board-box .view2-wrapper .img-mini {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=view2.css.map */

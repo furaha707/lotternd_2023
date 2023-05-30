@@ -1,0 +1,125 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '2';
+    $P_dp2 = '1';
+    $P_dp3 = '3';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../../assets/css/research.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<!-- S : 탭 메뉴 링크 -->
+			<section class="section py-lg-20 py-10">
+				<div class="container">
+					<div class="tab common-tab research-tab" data-tab="false" data-tab-active="on" data-tab-index="0" data-tab-mode="js">
+						<div class="tab-header mb-4" data-tab-header="">
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_1_href?>" class="link" data-tab-item=""><?=$nav_2_1_1?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_2_href?>#contents" class="link" data-tab-item=""><?=$nav_2_1_2?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_3_href?>#contents" class="link on" data-tab-item=""><?=$nav_2_1_3?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_4_href?>#contents" class="link" data-tab-item=""><?=$nav_2_1_4?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_5_href?>#contents" class="link" data-tab-item=""><?=$nav_2_1_5?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_6_href?>#contents" class="link" data-tab-item=""><?=$nav_2_1_6?></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 탭 메뉴 링크 -->
+
+			<!-- S : 본문 -->
+			<section class="section pb-15 pb-lg-30">
+				<div class="research-ban">
+					<div class="img-bx wow fadeIn" data-wow-duration="0.5s">
+						<img src="../../assets/images/sub/research/research-ban3.jpg" alt="연구이미지" class="d-none d-md-block" />
+						<img src="../../assets/images/sub/research/m-ban3.jpg" alt="연구이미지" class="d-block d-md-none" />
+					</div>
+					<div class="container">
+						<div class="tit-bx">
+							<p class="tit wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">패키지연구</p>
+							<p class="txt wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를 이룹니다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="research-wrap">
+						<div class="research-category">
+							<ul class="cate-list">
+								<li class="cate-item active"><a href="javascript:void(0)" class="link" data-target="#content01">포장</a></li>
+								<li class="cate-item"><a href="javascript:void(0)" class="link" data-target="#content02">디자인</a></li>
+							</ul>
+						</div>
+						<div class="research-contents">
+							<ul class="contents-list">
+								<li class="contents-item wow fadeInUp" id="content01" data-wow-duration="0.8s" data-wow-delay="0.2s">
+									<div class="img-bx">
+										<img src="../../assets/images/sub/research/package-img1.jpg" alt="연구이미지 " />
+									</div>
+									<div class="txt-bx">
+										<p class="tit">포장</p>
+										<p class="des">제품의 품질을 안정적으로 유지하기 위한 포장 기술을 연구하고 패키지를 개발합니다. 각 제품별로 적합한 소재와 형태를 검토하고 생산 및 유통 단계까지 고려하여 포장재를 설계하고 있습니다. 이로써 효과적인 패키징 타입이 제품에 안정적으로 적용될 수 있도록 합니다. 친환경 인쇄기술의 확보를 통해 포장재 생산 시 발생되는 VOCs(Volatile Organic Compounds)를 줄이고 잉크 절감, PET 경량화, 부산물 자원화 등의 시도를 이어오고 있으며 오감/점자 및 기능성 패키징을 통해 새로운 가치를 제공하는데도 주력하고 있습니다.</p>
+									</div>
+								</li>
+								<li class="contents-item wow fadeInUp" id="content02" data-wow-duration="0.8s" data-wow-delay="0.3s">
+									<div class="img-bx">
+										<img src="../../assets/images/sub/research/package-img2.jpg" alt="연구이미지 " />
+									</div>
+									<div class="txt-bx">
+										<p class="tit">디자인</p>
+										<p class="des">제품 용기의 외형 설계 및 모델링부터 라벨, BI, 시뮬레이션 이미지 등의 그래픽까지 소비자에게 시각적으로 어필할 수 있는 모든 부분에 대한 디자인을 책임집니다. 제품별 특성에 맞는 효과적인 디자인을 구현해낼 수 있도록 개발 및 마케팅을 비롯한 다양한 부서와의 협업을 통해 고유한 디자인 컨셉과 스토리를 창조합니다. 단순히 심미적인 부분만을 고려하는 것이 아니라 제품의 기획 의도와 특징, 친환경적 요소 등 기능적인 부분을 복합적으로 고려해 하나의 제품을 최종적으로 완성시키는 데 다양한 가치를 부여하는 역할을 수행하고 있습니다.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 본문 -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			$(document).ready(function () {
+				const headerHeight = $('.header').height() + $('.sub-nav').height() + 30;
+
+				$('.cate-item [data-target]').on('click', function () {
+					const target = $(this).attr('data-target');
+					const scrollPosition = $(target).offset().top - headerHeight;
+
+					$('.cate-item').removeClass('active');
+					$(this).parent().addClass('active');
+					$('html, body').stop().animate({ scrollTop: scrollPosition }, 500);
+				});
+			});
+		</script>
+	</body>
+</html>

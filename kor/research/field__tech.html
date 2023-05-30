@@ -1,0 +1,109 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '2';
+    $P_dp2 = '1';
+    $P_dp3 = '4';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../../assets/css/research.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<!-- S : 탭 메뉴 링크 -->
+			<section class="section py-lg-20 py-10">
+				<div class="container">
+					<div class="tab common-tab research-tab" data-tab="false" data-tab-active="on" data-tab-index="0" data-tab-mode="js">
+						<div class="tab-header mb-4" data-tab-header="">
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_1_href?>" class="link" data-tab-item=""><?=$nav_2_1_1?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_2_href?>#contents" class="link" data-tab-item=""><?=$nav_2_1_2?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_3_href?>#contents" class="link" data-tab-item=""><?=$nav_2_1_3?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_4_href?>#contents" class="link on" data-tab-item=""><?=$nav_2_1_4?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_5_href?>#contents" class="link" data-tab-item=""><?=$nav_2_1_5?></a>
+							</div>
+							<div class="tab-item">
+								<a href="<?=$nav_2_1_6_href?>#contents" class="link" data-tab-item=""><?=$nav_2_1_6?></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 탭 메뉴 링크 -->
+
+			<!-- S : 본문 -->
+			<section class="section pb-15 pb-lg-30">
+				<div class="research-ban">
+					<div class="img-bx wow fadeIn" data-wow-duration="0.5s">
+						<img src="../../assets/images/sub/research/research-ban4.jpg" alt="연구이미지" class="d-none d-md-block" />
+						<img src="../../assets/images/sub/research/m-ban4.jpg" alt="연구이미지" class="d-block d-md-none" />
+					</div>
+					<div class="container">
+						<div class="tit-bx">
+							<p class="tit wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">기술연구</p>
+							<p class="txt wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="research-wrap">
+						<div class="research-contents">
+							<ul class="contents-list">
+								<li class="contents-item wow fadeInUp" id="content01" data-wow-duration="0.8s" data-wow-delay="0.2s">
+									<div class="img-bx">
+										<img src="../../assets/images/sub/research/tech-img1.jpg" alt="연구이미지 " />
+									</div>
+									<div class="txt-bx">
+										<p class="des">식품 산업의 고도화를 위한 신기술을 개발하고 선진적으로 현장에 적용합니다. AI, IoT, 협동로봇, 3D프린터 등을 제품 개발 과정에 적용해 개발 역량을 끌어올릴 수 있도록 지원하며, Simulation 기반의 융·복합 해석 기술을 통해 식품 제조 및 생산 과정의 최적화와 혁신을 꾀하고 있습니다. 푸드테크를 기반으로 업계에 새로운 패러다임을 제시하기 위한 연구를 지속해 식품 산업이 지속가능한 미래로 나아가는데 핵심적 역할을 수행합니다.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 본문 -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+		<script>
+			$(document).ready(function () {
+				const headerHeight = $('.header').height() + $('.sub-nav').height() + 30;
+
+				$('.cate-item [data-target]').on('click', function () {
+					const target = $(this).attr('data-target');
+					const scrollPosition = $(target).offset().top - headerHeight;
+
+					$('.cate-item').removeClass('active');
+					$(this).parent().addClass('active');
+					$('html, body').stop().animate({ scrollTop: scrollPosition }, 500);
+				});
+			});
+		</script>
+	</body>
+</html>

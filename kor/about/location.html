@@ -1,0 +1,167 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = '1';
+    $P_dp2 = '4';
+    include "../include/meta.html"
+		?>
+		<link rel="stylesheet" href="../../assets/css/about.min.css" />
+	</head>
+	<body class="sub-body">
+		<!-- S : Header -->
+		<? include "../include/header.html" ?>
+		<!-- E : Header -->
+
+		<!-- S : Sub visual -->
+		<? include "../include/sub-visual.html" ?>
+		<!-- E : Sub visual -->
+
+		<!-- S : Sub navigation -->
+		<? include "../include/sub-nav.html" ?>
+		<!-- E : Sub navigation -->
+
+		<!-- S : Main -->
+		<main class="main" id="contents">
+			<!-- S : Section -->
+			<section class="section py-lg-30 pt-0 pb-15">
+				<div class="map-wrap">
+					<div class="map"></div>
+					<div class="map-info-box wow fadeIn">
+						<div class="title">롯데중앙연구소</div>
+						<ul class="list">
+							<li>
+								<span>Office</span>
+								<p>서울특별시 강서구 마곡중앙로 201</p>
+							</li>
+							<li>
+								<span>TEL</span>
+								<p>+82-2-6309-3114</p>
+							</li>
+							<li>
+								<span>FAX</span>
+								<p>+82-2-6309-3119</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="come-info py-lg-15 py-10">
+					<div class="container">
+						<div class="come-info--list pb-lg-15 pb-10">
+							<div class="list">
+								<div class="title">지하철로 오시는 길</div>
+								<div class="cont">지하철 9호선 마곡나루역 2번 출구</div>
+							</div>
+							<div class="list pl-lg-15">
+								<div class="title">버스로 오시는 길</div>
+								<div class="cont">서남물재생센터 하차 도보 2분 (간선 672, 지선 6631, 6712)</div>
+							</div>
+						</div>
+						<div class="come-info--list pt-lg-15 pt-10 border-top">
+							<div class="list list--car">
+								<div class="box">
+									<div class="title">자동차로 오시는 길</div>
+									<div class="cont">
+										<p class="tit"><span>①</span> 신방화사거리 > 롯데중앙연구소</p>
+										<p class="desc">신방화사거리에서 서남물 재생센터 방향 약 700m 직진 > 마곡나루역 방면 우회전 > 100m 이동</p>
+									</div>
+								</div>
+								<div class="box pl-lg-15">
+									<div class="cont">
+										<p class="tit"><span>②</span> 올림픽대로 > 양천향교역 > 롯데중앙연구소</p>
+										<p class="desc">U턴 없이 바로 정문 진입</p>
+									</div>
+								</div>
+								<div class="box">
+									<div class="cont">
+										<p class="tit"><span>①</span> 마곡나루역 > 롯데중앙연구소</p>
+										<p class="desc">마곡나루역에서 서남물 재생센터 앞 삼거리에서 U턴 > 100m 이동 > 롯데중앙연구소</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : Section -->
+		</main>
+		<!-- E : Main -->
+
+		<? include "../include/footer.html" ?>
+
+		<? include "../include/js.html" ?>
+		<!-- test 서버 키값 -->
+		<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6c2dc4632d809adb2ca5e704369678c4&libraries=services"></script> -->
+
+		<!-- 로컬서버 키값 -->
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b42ce64838d3ba3c9de7f36899d7134a&libraries=services"></script>
+		<script>
+			/* 지도 엘리먼트 (클래스명) */
+			var mapContainer = document.querySelectorAll('.map');
+
+			/* 지도 옵션 오브젝트 배열 */
+			var mapSettings = [
+				{
+					// ## 지도1 ##
+					mapOption: {
+						// 지도 옵션
+						center: new kakao.maps.LatLng(37.571407693908, 126.827730783478), // 지도의 중심 좌표
+						level: 3, // 지도의 확대 레벨
+					},
+					markerPosition: new kakao.maps.LatLng(37.571407693908, 126.827730783478), // 마커가 표시될 위치입니다
+					imageSrc: '../../assets/images/sub/about/map-marker.png', // 마커이미지의 주소입니다
+					imageSize: new kakao.maps.Size(31, 40), // 마커이미지의 크기입니다
+					imageOption: { offset: new kakao.maps.Point(16, 50) }, // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+				},
+			];
+			if (window.NodeList && !NodeList.prototype.forEach) {
+				NodeList.prototype.forEach = Array.prototype.forEach;
+			}
+
+			mapContainer.forEach(function (currentValue, index, array) {
+				if (mapSettings.length !== array.length) {
+					console.error('mapSettings 배열의 Object 개수와 map 엘리먼트의 객체의 개수가 일치해야합니다.\nmapSettings 배열의 Object 개수와 map 엘리먼트 개수가 일치하는지 확인해주세요.');
+				} else {
+					// 맵 객체 생성
+					var map = new kakao.maps.Map(currentValue, mapSettings[index].mapOption);
+					// 마커 이미지 객체 생성
+					var markerImage = new kakao.maps.MarkerImage(mapSettings[index].imageSrc, mapSettings[index].imageSize, mapSettings[index].imageOption);
+					// 마커 객체 생성
+					var marker = new kakao.maps.Marker({
+						position: mapSettings[index].markerPosition, // 마커 좌표
+						image: markerImage, // 마커 이미지 객체 저장
+					});
+
+					// 마커가 지도 위에 표시되도록 설정합니다
+					marker.setMap(map);
+
+					// S: ## 좌표얻기 1 : 클릭한 위치에 마커올려보기 + 좌표얻기 ##
+					// 프로젝트 작업 후 주석!
+					kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
+						var latlng = mouseEvent.latLng; // 클릭한 위도, 경도 정보를 가져옵니다
+						marker.setPosition(latlng); // 마커 위치를 클릭한 위치로 옮깁니다
+						var message = '클릭한 위치의 좌표는 \n' + latlng.getLat() + ',' + latlng.getLng() + ' \n입니다';
+						alert(message);
+						console.log(message);
+					});
+					// E: ## 좌표얻기 1 : 클릭한 위치에 마커올려보기 + 좌표얻기 ##
+				}
+			});
+
+			// S: ## 좌표얻기 2 : 검색한 주소의 좌표얻기 ##
+			// 프로젝트 작업 후 주석!
+			var geocoder = new kakao.maps.services.Geocoder();
+			var callback = function (result, status) {
+				if (status === kakao.maps.services.Status.OK) {
+					// console.log(result);
+					console.log('주소 검색결과 좌표는 \n' + result[0].road_address.y + ',' + result[0].road_address.x + '\n입니다');
+				} else {
+					console.log('주소 검색결과가 없습니다');
+				}
+			};
+			geocoder.addressSearch('서울특별시 강서구 마곡중앙로 201', callback);
+			// E: ## 좌표얻기 2 : 검색한 주소의 좌표얻기
+		</script>
+	</body>
+</html>
