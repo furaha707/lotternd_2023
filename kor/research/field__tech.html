@@ -91,19 +91,6 @@
 
 		<? include "../include/footer.html" ?>
 		<? include "../include/js.html" ?>
-		<script>
-			$(document).ready(function () {
-				const headerHeight = $('.header').height() + $('.sub-nav').height() + 30;
-
-				$('.cate-item [data-target]').on('click', function () {
-					const target = $(this).attr('data-target');
-					const scrollPosition = $(target).offset().top - headerHeight;
-
-					$('.cate-item').removeClass('active');
-					$(this).parent().addClass('active');
-					$('html, body').stop().animate({ scrollTop: scrollPosition }, 500);
-				});
-			});
-		</script>
+		<script></script>
 	</body>
 </html>

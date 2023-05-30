@@ -108,17 +108,40 @@
 		<? include "../include/footer.html" ?>
 		<? include "../include/js.html" ?>
 		<script>
-			$(document).ready(function () {
-				const headerHeight = $('.header').height() + $('.sub-nav').height() + 30;
+			const headerHeight = $('.header').height() + $('.sub-nav').height() + 30;
 
+			$(document).ready(function () {
 				$('.cate-item [data-target]').on('click', function () {
 					const target = $(this).attr('data-target');
 					const scrollPosition = $(target).offset().top - headerHeight;
 
 					$('.cate-item').removeClass('active');
 					$(this).parent().addClass('active');
-					$('html, body').stop().animate({ scrollTop: scrollPosition }, 500);
+					$('html, body')
+						.stop()
+						.animate({ scrollTop: scrollPosition + 10 }, 500);
 				});
+			});
+
+			$(window).scroll(function () {
+				const cateHeight = $('.research-contents').offset().top - 80;
+				const windowT = $(window).scrollTop();
+				const scrollCt = $('.cate-item');
+
+				if (windowT >= cateHeight) {
+					$('.cate-list').addClass('fixed');
+				} else {
+					$('.cate-list').removeClass('fixed');
+				}
+
+				for (var i = 0; i < scrollCt.length; i++) {
+					if (windowT >= $('.contents-item').eq(i).offset().top - headerHeight - 20) {
+						$('.cate-item').removeClass('active');
+						$('.cate-item').eq(i).addClass('active');
+					} else {
+						$('.cate-item').eq(i).removeClass('active');
+					}
+				}
 			});
 		</script>
 	</body>

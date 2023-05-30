@@ -42,55 +42,33 @@
 			</section>
 			<!-- E : 탭 메뉴 링크 -->
 
-				<!-- S : 슬라이드 영역 -->
-				<section class="section section--04 view-section">
-					<div class="img-bx">
-						<img src="../../assets/images/main/section4-bg.jpg" alt="이미지">
-					</div>
-					<div class="container">
-						<div class="tab-content tab-content-02 wow fadeInUp">
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="life-inner">
-											<p class="tit">관능의 DT(Digital Transformation)를 통한 맛의 객관화 실현</p>
-											<p class="txt">관능 평가란 사람의 미각, 후각, 촉각, 청각, 시각 등의 감각을 이용해 식품의 특성을 평가하는 것입니다. 롯데중앙연구소는 사람이 행하는 주관적인 평가를 ‘객관화’하기 위해 관능의 디지털 트랜스포메이션(DT)을 연구하고 있습니다. 관능 DT란 전자혀(미각), 전자코(후각), TA & 근전도 측정기(촉각, 식감), 전자귀(청각), 전자눈(시각) 등의 장비로 분석한 반응을 해석하는 기술입니다. 인간의 오감(五感)에 대한 DT뿐만 아니라, 감성과 무의식적 판단을 분석하기 위해 뇌파 분석까지 영역을 확장하며 차별화된 신제품 개발을 도모하고 있습니다.</p>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="life-inner">
-											<p class="tit">관능의 DT(Digital Transformation)를 통한 맛의 객관화 실현</p>
-											<p class="txt">관능 평가란 사람의 미각, 후각, 촉각, 청각, 시각 등의 감각을 이용해 식품의 특성을 평가하는 것입니다. 롯데중앙연구소는 사람이 행하는 주관적인 평가를 ‘객관화’하기 위해 관능의 디지털 트랜스포메이션(DT)을 연구하고 있습니다. 관능 DT란 전자혀(미각), 전자코(후각), TA & 근전도 측정기(촉각, 식감), 전자귀(청각), 전자눈(시각) 등의 장비로 분석한 반응을 해석하는 기술입니다. 인간의 오감(五感)에 대한 DT뿐만 아니라, 감성과 무의식적 판단을 분석하기 위해 뇌파 분석까지 영역을 확장하며 차별화된 신제품 개발을 도모하고 있습니다.</p>
-										</div>
-									</div>
+			<!-- S : 슬라이드 영역 -->
+			<section class="section section--04 view-section mt-20">
+				<div class="tab-content tab-content-02 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="img-bx">
+									<img src="../../assets/images/main/tab-bg1.jpg" alt="이미지" class="d-none d-lg-block" />
+									<img src="../../assets/images/main/tab_bg1-m.jpg" alt="이미지" class="d-block d-lg-none" />
 								</div>
-								<div class="swiper-control">
-									<div class="swiper-pagination"></div>
-									<div class="swiper-play on">
-										<i class="xi-play"></i>
-										<i class="xi-pause"></i>
-									</div>
+								<div class="life-inner view-inner">
+									<p class="tit">카카오껍질로 종이를? 폐기물 자원화 패키징</p>
+									<p class="txt">초콜릿을 만든 후 발생하는 부산물은 연간 600톤 정도에 이릅니다. 부산물은 사료로 사용되기도 하지만 보통 많은 양이 버려집니다. 이러한 점에 착안하여 부산물을 초콜릿 포장재 원료로 탈바꿈시키는 연구를 진행했습니다. 카카오 부산물의 활용방안을 검토하는 종이 제조 원천 기술을 보유한 국내 1위 제지사인 한솔제지와의 공동연구를 통해, 환경 친화적인 종이를 개발하게 되었습니다.</p>
 								</div>
-								<button type="button" class="swiper-button swiper-button--prev">
-									<img src="../../assets/images/icon/big-arrow-left.png" alt="prev" />
-								</button>
-								<button type="button" class="swiper-button swiper-button--next">
-									<img src="../../assets/images/icon/big-arrow-right.png" alt="next" />
-								</button>
 							</div>
 						</div>
 					</div>
-				</section>
-				<!-- E : 슬라이드 영역 -->
+				</div>
+			</section>
+			<!-- E : 슬라이드 영역 -->
 
-				<section class="section">
-					<div class="container">
+			<section class="section">
+				<div class="container">
 					<!-- 개발 시, .board-box 와 .my-10 을 제외한 나머지 클래스들은 삭제해주세요! -->
-					<div class="board-box my-10 py-20 text-center bg-light">
-						에디터 영역입니다.
-					</div>
-					</div>
-				</section>
+					<div class="board-box my-10 py-20 text-center bg-light">에디터 영역입니다.</div>
+				</div>
+			</section>
 
 			<!-- S : 본문 -->
 			<section class="section pb-20">
@@ -125,115 +103,115 @@
 		<? include "../include/footer.html" ?>
 		<? include "../include/js.html" ?>
 		<script>
-			$(document).ready(function(){
-						var lifeSwiper = new Swiper('.tab-content-02 .swiper-container', {
-				loop: false,
-				effect: 'fade',
-				fadeEffect: {
-					crossFade: true,
-				},
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false,
-				},
-				autoHeight: true,
-				pagination: {
-					el: '.tab-content-02 .swiper-pagination',
-					type: 'bullets',
-					clickable: true,
-				},
-				navigation: {
-					nextEl: '.tab-content-02 .swiper-button--next',
-					prevEl: '.tab-content-02 .swiper-button--prev',
-				},
-			});
+			$(document).ready(function () {
+				var lifeSwiper = new Swiper('.tab-content-02 .swiper-container', {
+					loop: false,
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: true,
+					},
+					autoplay: {
+						delay: 5000,
+						disableOnInteraction: false,
+					},
+					autoHeight: true,
+					pagination: {
+						el: '.tab-content-02 .swiper-pagination',
+						type: 'bullets',
+						clickable: true,
+					},
+					navigation: {
+						nextEl: '.tab-content-02 .swiper-button--next',
+						prevEl: '.tab-content-02 .swiper-button--prev',
+					},
+				});
 
-			$('.tab-content-02 .swiper-play').children('i').eq(0).hide();
+				$('.tab-content-02 .swiper-play').children('i').eq(0).hide();
 
-			$('.tab-content-02 .swiper-play').on('click', function () {
-				if ($(this).hasClass('on')) {
-					$(this).removeClass('on');
-					lifeSwiper.autoplay.stop();
-					$(this).children('i').show();
-					$(this).children('i').eq(1).hide();
-				} else {
-					$(this).addClass('on');
-					lifeSwiper.autoplay.start();
-					$(this).children('i').show();
-					$(this).children('i').eq(0).hide();
-				}
-			});
-
-			// 검색 카테고리 선택
-			const selectTit = document.querySelector('.select-title');
-			const selectOpt = document.querySelector('.select-bx .inner');
-			const optList = document.querySelectorAll('input[name="product"]');
-			const defaultList = ['FoodTech', 'ESG', '개발·제조', '안전·위생'];
-			let listArray = [];
-
-			// 리스트 보이기
-			function Showoption() {
-				selectTit.classList.toggle('on');
-				selectOpt.classList.toggle('active');
-			}
-
-			selectTit.addEventListener('click', Showoption);
-
-			// 리스트 클릭에 따라 추가 및 삭제
-			optList.forEach(function (item) {
-				item.addEventListener('change', function (e) {
-					let optText = e.target.parentElement.innerText;
-					let state = $(this).prop('checked');
-					if (e.target.className === 'all-check') {
-						state ? $('.check').prop('checked', true) : $('.check').prop('checked', false);
-
-						if (e.target.checked) {
-							listArray = defaultList;
-							selectTit.textContent = 'ALL';
-							console.log(listArray);
-						} else {
-							listArray = [];
-							selectTit.textContent = 'ALL';
-							console.log(listArray);
-						}
+				$('.tab-content-02 .swiper-play').on('click', function () {
+					if ($(this).hasClass('on')) {
+						$(this).removeClass('on');
+						lifeSwiper.autoplay.stop();
+						$(this).children('i').show();
+						$(this).children('i').eq(1).hide();
 					} else {
-						if (e.target.checked) {
-							if (!listArray.includes(item)) {
-								listArray.push(optText);
-								selectTit.textContent = listArray;
+						$(this).addClass('on');
+						lifeSwiper.autoplay.start();
+						$(this).children('i').show();
+						$(this).children('i').eq(0).hide();
+					}
+				});
+
+				// 검색 카테고리 선택
+				const selectTit = document.querySelector('.select-title');
+				const selectOpt = document.querySelector('.select-bx .inner');
+				const optList = document.querySelectorAll('input[name="product"]');
+				const defaultList = ['FoodTech', 'ESG', '개발·제조', '안전·위생'];
+				let listArray = [];
+
+				// 리스트 보이기
+				function Showoption() {
+					selectTit.classList.toggle('on');
+					selectOpt.classList.toggle('active');
+				}
+
+				selectTit.addEventListener('click', Showoption);
+
+				// 리스트 클릭에 따라 추가 및 삭제
+				optList.forEach(function (item) {
+					item.addEventListener('change', function (e) {
+						let optText = e.target.parentElement.innerText;
+						let state = $(this).prop('checked');
+						if (e.target.className === 'all-check') {
+							state ? $('.check').prop('checked', true) : $('.check').prop('checked', false);
+
+							if (e.target.checked) {
+								listArray = defaultList;
+								selectTit.textContent = 'ALL';
+								console.log(listArray);
+							} else {
+								listArray = [];
+								selectTit.textContent = 'ALL';
 								console.log(listArray);
 							}
 						} else {
-							listArray = listArray.filter((element) => element !== optText);
-							if (listArray.length > 0) {
-								selectTit.textContent = listArray;
+							if (e.target.checked) {
+								if (!listArray.includes(item)) {
+									listArray.push(optText);
+									selectTit.textContent = listArray;
+									console.log(listArray);
+								}
 							} else {
-								selectTit.textContent = 'ALL';
+								listArray = listArray.filter((element) => element !== optText);
+								if (listArray.length > 0) {
+									selectTit.textContent = listArray;
+								} else {
+									selectTit.textContent = 'ALL';
+								}
+								console.log(listArray);
 							}
-							console.log(listArray);
 						}
-					}
 
-					$('.check').each(function (index, elem) {
-						state = $(this).prop('checked'); /* 변수에 체크박스 true/false 저장 */
+						$('.check').each(function (index, elem) {
+							state = $(this).prop('checked'); /* 변수에 체크박스 true/false 저장 */
+							if (state) {
+								state = true;
+							} else {
+								state = false;
+								// selectTit.textContent = '검색';
+								return false; /* state가 false인 경우 반복문 중단 */
+							}
+						});
+
+						/* 개별 체크박스 체크 상태값에 따라 전체 체크에도 활성/비활성 */
 						if (state) {
-							state = true;
+							$('.all-check').prop('checked', true);
 						} else {
-							state = false;
-							// selectTit.textContent = '검색';
-							return false; /* state가 false인 경우 반복문 중단 */
+							$('.all-check').prop('checked', false);
 						}
 					});
-
-					/* 개별 체크박스 체크 상태값에 따라 전체 체크에도 활성/비활성 */
-					if (state) {
-						$('.all-check').prop('checked', true);
-					} else {
-						$('.all-check').prop('checked', false);
-					}
 				});
 			});
-		});
 		</script>
 	</body>
 </html>

@@ -22,10 +22,10 @@
               pc: 1920x960
               m: 1440x2560 
             -->
-							<div class="swiper-slide item" data-swiper-autoplay="17000">
+							<div class="swiper-slide item" data-swiper-autoplay="11300">
 								<a href="#" class="link">
-									<div class="img-bx">
-										<video src="../../assets/images/main/main-video.mp4" muted loop data-autoplay playsinline></video>
+									<div class="img-bx video-slide">
+										<video src="../../assets/images/main/main-video-new.mp4" muted loop data-autoplay playsinline></video>
 									</div>
 									<div class="txt-bx">
 										<div class="container">
@@ -145,7 +145,7 @@
 					<div class="section-bx">
 						<div class="video-bx">
 							<video data-autoplay data-keepplaying playsinline muted="muted">
-								<source src="../../assets/images/main/company_bg2.mp4" type="video/mp4" />
+								<source src="../../assets/images/main/company_bg.mp4" type="video/mp4" />
 							</video>
 							<!-- <img src="../../assets/images/main/test-bg.jpg" alt="" /> -->
 						</div>
@@ -372,24 +372,25 @@
 									</div>
 								</div>
 								<div class="tab-content tab-content-02" data-tab-content="">
-									<!-- <div class="img-bx">
-										<img src="../../assets/images/main/visual1-pc.jpg" alt="배경" class="slide-bg show" />
-										<img src="../../assets/images/main/visual2-pc.jpg" alt="배경" class="slide-bg" />
-									</div> -->
+									<div class="img-bx d-none d-lg-block">
+										<img src="../../assets/images/main/tab-bg1.jpg" alt="배경" class="slide-bg" />
+										<img src="../../assets/images/main/tab-bg2.jpg" alt="배경" class="slide-bg slide-show" />
+									</div>
+									<div class="img-bx d-block d-lg-none">
+										<img src="../../assets/images/main/tab_bg1-m.jpg" alt="배경" class="m-slide-bg" />
+										<img src="../../assets/images/main/tab_bg2-m.jpg" alt="배경" class="m-slide-bg slide-show" />
+									</div>
 									<div class="swiper-container">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<div class="img-bx">
-													<img src="../../assets/images/main/visual1-pc.jpg" alt="배경" class="slide-bg show" />
-												</div>
 												<div class="life-inner">
-													<a href="../research/better__life-view.html" class="tit">자일리톨이란 무엇일까요?</a>
-													<a href="../research/better__life-view.html" class="txt">자일리톨은 자작나무등에서 추출하는 소재의 감미료입니다. 자일리톨이 처음 알려진 것은 1890년대입니다. 제2차 세계대전이 발발하면서 부족한 설탕의 대용품으로 연구되기 시작한 뒤, 당뇨병 환자용을 거쳐 1970년대 초부터 치의학 분야에 활용되면서 충치 예방에 적합한 감미료로 인정받았습니다. 인체 내에서 포도당 대사의 중간물질로 생성되기도 하지만, 주로 식물에 분포합니다.</a>
+													<a href="../research/better__life-view.html" class="tit">카카오껍질로 종이를? 폐기물 자원화 패키징</a>
+													<a href="../research/better__life-view.html" class="txt">초콜릿을 만든 후 발생하는 부산물은 연간 600톤 정도에 이릅니다. 부산물은 사료로 사용되기도 하지만 보통 많은 양이 버려집니다. 이러한 점에 착안하여 부산물을 초콜릿 포장재 원료로 탈바꿈시키는 연구를 진행했습니다. 카카오 부산물의 활용방안을 검토하는 종이 제조 원천 기술을 보유한 국내 1위 제지사인 한솔제지와의 공동연구를 통해, 환경 친화적인 종이를 개발하게 되었습니다.</a>
 												</div>
 											</div>
 											<div class="swiper-slide">
 												<div class="life-inner">
-													<a href="../research/better__life-view.html" class="tit">자일리톨이란 무엇일까요?2</a>
+													<a href="../research/better__life-view.html" class="tit">자일리톨이란 무엇일까요?</a>
 													<a href="../research/better__life-view.html" class="txt">자일리톨은 자작나무등에서 추출하는 소재의 감미료입니다. 자일리톨이 처음 알려진 것은 1890년대입니다. 제2차 세계대전이 발발하면서 부족한 설탕의 대용품으로 연구되기 시작한 뒤, 당뇨병 환자용을 거쳐 1970년대 초부터 치의학 분야에 활용되면서 충치 예방에 적합한 감미료로 인정받았습니다. 인체 내에서 포도당 대사의 중간물질로 생성되기도 하지만, 주로 식물에 분포합니다.</a>
 												</div>
 											</div>
@@ -483,6 +484,7 @@
 
 		<? include "../include/js.html" ?>
 		<script>
+			// 메인비주얼 스와이퍼
 			$(document).ready(function () {
 				var visualSwiper = new Swiper('.main-visual .swiper-container', {
 					loop: true,
@@ -499,11 +501,23 @@
 					},
 				});
 
+				// // 메인비주얼 bullets 추가
+				// var pagingSwiper = new Swiper('.main-visual .plus-container', {
+				// 	pagination: {
+				// 		el: '.main-visual .plus-pagination',
+				// 		type: 'bullets',
+				// 		loop: false,
+				// 	},
+				// 	slidesPerGroup: 1,
+				// });
+
+				// visualSwiper.controller.control = pagingSwiper;
+
 				/* GET ALL VIDEOS */
 				var sliderVideos = $('.main-visual .swiper-slide video');
 
 				/* SWIPER API - Event will be fired after animation to other slide (next or previous) */
-				visualSwiper.on('slidePrevTransitionEnd', function () {
+				visualSwiper.on('slideChangeTransitionEnd', function () {
 					/* stop all videos (currentTime buggy without this loop idea) */
 
 					/* SWIPER GET CURRENT AND PREV SLIDE (AND VIDEO INSIDE) */
@@ -517,17 +531,6 @@
 						this.currentTime = 0;
 					});
 				});
-
-				// 메인비주얼 bullets 추가
-				var pagingSwiper = new Swiper('.section--01 .plus-container', {
-					pagination: {
-						el: '.section--01 .plus-pagination',
-						type: 'bullets',
-						clickable: true,
-					},
-				});
-
-				visualSwiper.controller.control = pagingSwiper;
 
 				//section--03 카테고리부분
 				const tabItem = document.querySelectorAll('.research-category li');
@@ -602,6 +605,9 @@
 				});
 
 				// section04 탭부분
+
+				$('.tab-content-02 .img-bx').css('opacity', '0');
+
 				$('.tab-content-02 .swiper-play').children('i').eq(0).hide();
 
 				$('.tab-content-02 .swiper-play').on('click', function () {
@@ -623,6 +629,7 @@
 					.on('click', function () {
 						$('.section--04').removeClass('food-section life-section');
 						$('.section--04').addClass('food-section');
+						$('.tab-content-02 .img-bx').css('opacity', '0');
 						if (window.innerWidth > 1200) {
 							$('header').addClass('fixed');
 						}
@@ -666,8 +673,10 @@
 					},
 					on: {
 						slideChangeTransitionStart: function () {
-							$('.slide-bg').removeClass('show');
-							$('.slide-bg').eq(this.activeIndex).addClass('show');
+							$('.slide-bg').removeClass('slide-show');
+							$('.slide-bg').eq(this.activeIndex).addClass('slide-show');
+							$('.m-slide-bg').removeClass('slide-show');
+							$('.m-slide-bg').eq(this.activeIndex).addClass('slide-show');
 						},
 					},
 				});
